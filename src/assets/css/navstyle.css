@@ -1,0 +1,68 @@
+.header-link{
+    position: relative;
+    display: block;
+    line-height: 24px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--tg-heading-font-color);
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    border: none;
+    font-family: var(--tg-heading-font-family);
+    border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.drop-links {
+    position: relative;
+    display: block;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--tg-heading-font-color);
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    border: none;
+    font-family: var(--tg-heading-font-family);
+}
+
+.drop-head {
+    cursor: pointer;
+    transition: all 1s;
+    position: relative;
+    display: block;
+    line-height: 24px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--tg-heading-font-color);
+    text-transform: capitalize;
+    transition: all 500ms ease;
+    border: none;
+    font-family: var(--tg-heading-font-family);
+    border-top: 1px solid rgb(0 0 0 / 10%);
+}
+
+.header-link:hover {
+    color: var(--tg-primary-color);
+    text-decoration: underline;
+}
+.toggle-bar{
+    /* border:2px solid red; */
+    font-size:38px;
+}
+.toggle-bar:hover{
+    color: var(--tg-primary-color);
+    cursor: pointer;
+}
+
+.toggle-bar-parent{
+    border:none !important;
+    outline:none !important;
+    box-shadow: none !important;
+    background:transparent !important;
+}
+

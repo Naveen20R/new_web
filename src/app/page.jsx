@@ -1,0 +1,54 @@
+"use client"
+import React, { useEffect } from 'react';
+import Header from "@/components/header/Header";
+import styles from "./page.module.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import MainMenuLink from "@/components/mainmenu/MainMenuLink";
+import MenuLayout from "@/layouts/MenuLayout";
+import Link from 'next/link';
+import '@/assets/css/articalStyle.css'
+import axios from '../config';
+import { useDispatch, useSelector } from 'react-redux';
+
+
+export default function Home() {
+  const { categories, selectCategory } = useSelector((state) => state.categories);  // all datas
+
+
+  console.log(categories);
+  
+
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      try {
+        const res = await axios.get('/api/user/homePagecategories');
+        console.log(res);
+
+        // setMetadata(res.data);
+      } catch (error) {
+        console.error('Error fetching metadata:', error);
+      } finally {
+        // setMetadataLoading(false);
+      }
+    };
+    fetchMetadata();
+  }, []);
+  return (
+    <>
+      <Header />
+      <MenuLayout />
+      <div className="container my-3">
+        <div className="row">
+          <div className="col-12 col-md-8" style={{ border: '2px solid red' }}>
+
+          </div>
+          <div className="col-12 col-md-4" style={{ border: '2px solid red' }}>
+
+          </div>
+        </div>
+      </div>
+
+    </>
+  );
+}

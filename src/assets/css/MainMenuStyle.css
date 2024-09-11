@@ -1,0 +1,67 @@
+.leftMenu-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 360px;
+
+}
+
+/* Ensure dropdown-container is positioned correctly */
+.dropdown-container {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top:55px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    z-index: 1000;
+    display: none;
+    transition: all 2s;
+}
+
+/* Display dropdown on hover */
+.dropdown-container:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style the dropdown items */
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 10px;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.add-image {
+    width: 1005;
+    height: 200px;
+}
+
+.main-menu-dropdown:hover .main-menu-title {
+    color: var(--tg-primary-color);
+}
+.main-menu-dropdown:hover .fa-angle-down {
+    color: var(--tg-primary-color);
+}
+
