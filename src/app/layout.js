@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { AuthProvider } from "@/provider/AuthContext";
+import ReduxProvider from "@/redux/ReduxProvider";
+import Header from "@/components/header/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,7 +24,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <AuthProvider>
+          <ReduxProvider>
+            {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
+              <FontAwesomeIcon icon={faAngleUp} />
+            </button> */}
+            {/* Include the header */}
+            {/* <Header /> */}
+            <section className='container pt-70 pb-60'>
+              {/* <Menu /> */}
+              {/* <main className='fix' style={{ marginLeft: '285px' }}> */}
+              <main className='fix' >
+                {children}
+              </main>
+            </section>
+            {/* <CookieConsent /> */}
+          </ReduxProvider>
+        </AuthProvider>
       </body>
     </html>
   );
