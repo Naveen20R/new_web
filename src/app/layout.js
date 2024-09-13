@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { AuthProvider } from "@/provider/AuthContext";
+import {AuthProvider} from "@/provider/AuthContext";
 import ReduxProvider from "@/redux/ReduxProvider";
 import Header from "@/components/header/Header";
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      <AuthProvider>
+        <AuthProvider>
           <ReduxProvider>
             {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
               <FontAwesomeIcon icon={faAngleUp} />

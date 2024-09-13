@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
       axios
         .get('/api/user/signinWithToken', {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${token}`
           },
         })
         .then((response) => {
