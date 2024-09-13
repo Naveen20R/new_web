@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <section className='container pt-70 pb-60'>
               {/* <Menu /> */}
               {/* <main className='fix' style={{ marginLeft: '285px' }}> */}
-              <main className='fix' >
+              <main className='fix'>
                 {children}
               </main>
             </section>

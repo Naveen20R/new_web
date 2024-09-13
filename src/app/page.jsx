@@ -11,7 +11,7 @@ import '@/assets/css/articalStyle.css'
 import axios from '../config';
 // import { useDispatch, useSelector } from 'react-redux';
 import '@/assets/css/articalStyle.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
