@@ -37,6 +37,7 @@ export default function Home() {
     fetchMetadata();
   }, []);
 
+
   return (
     <>
       <Header />
@@ -115,7 +116,6 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-
               </div>
               {/* ----------- */}
             </div>
