@@ -1,14 +1,51 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing:border-box;
-}
-html,body{
-    width:100%;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-:root{
-    --tg-heading-font-color: #183354;
-    --tg-heading-font-family: 'Manrope', sans-serif;
+html,
+body {
+    width: 100%;
+}
+
+:root {
+    --tg-body-font-family: "Inter", sans-serif;
+    --tg-heading-font-family: "Manrope", sans-serif;
     --tg-primary-color: #f4796c;
+    --tg-secondary-color: #183354;
+    --tg-body-font-color: #545e69;
+    --tg-heading-font-color: #183354;
+    --tg-paragraph-color: #545e69;
+    --tg-icon-color: #6d757f;
+    --tg-border-color: #dfdfdf;
+    --tg-border-dark: #273341;
+    --tg-body-font-size: 16px;
+    --tg-body-font-weight: 400;
+    --tg-heading-font-weight: 700;
+    --tg-body-line-height: 1.75;
+    --tg-heading-line-height: 1.2;
+    --tg-blue: #0d6efd;
+    --tg-indigo: #6610f2;
+    --tg-purple: #6f42c1;
+    --tg-pink: #d63384;
+    --tg-red: #dc3545;
+    --tg-orange: #fd7e14;
+    --tg-yellow: #ffc107;
+    --tg-green: #198754;
+    --tg-teal: #e8f1f1;
+    --tg-cyan: #0dcaf0;
+    --tg-white: #ffffff;
+    --tg-black: #0c1622;
+    --tg-black-two: #000000;
+    --tg-gray: #d9d9d9;
+    --tg-gray-two: #bacce1;
+    --tg-gray-three: #f9f9f7;
+    --facebook: #104e87;
+    --twitter: #2eb4ff;
+    --linkedin: #0c7ed0;
+    --whatsapp: #145915;
+    --instagram: #ff2f7a;
+    --youtube: #c4302b;
+    --skype: #00aff0;
 }
