@@ -3,6 +3,7 @@
     align-items: center;
     position: relative;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .section-title-wrap-three.text-center {
@@ -215,7 +216,7 @@
     display: flex;
     flex-direction: column;
     max-height: 400px;
-    width: 600px;
+    max-width: 600px;
     cursor: pointer;
 }
 
@@ -489,6 +490,10 @@
 .view-all-btn_1 .homeblog-link-btn_1:hover{
  color:var(--tg-primary-color);
  text-decoration:underline;
+}
+.view-all-btn_1{
+    border-bottom:1px solid rgb(228, 228, 228);
+    padding-bottom:20px;
 }
 
 /* view more btn style end */

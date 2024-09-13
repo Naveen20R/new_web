@@ -1,45 +1,20 @@
 "use client"
 import React, { useEffect } from 'react';
 import Header from "@/components/header/Header";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import MainMenuLink from "@/components/mainmenu/MainMenuLink";
 import MenuLayout from "@/layouts/MenuLayout";
 import Link from 'next/link';
 import '@/assets/css/articalStyle.css'
-import axios from '../config';
-// import { useDispatch, useSelector } from 'react-redux';
 import '@/assets/css/articalStyle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
 import Artical from '@/components/articals/Artical';
 import ArticalHeading from '@/components/articals/ArticalHeading';
 
-export default function Home() {
-  // const { categories, selectCategory } = useSelector((state) => state.categories);  // all datas
-
-
-  // console.log(categories);
-
-
-  useEffect(() => {
-    const fetchMetadata = async () => {
-      try {
-        const res = await axios.get('/api/user/homePagecategories');
-        console.log(res);
-
-        // setMetadata(res.data);
-      } catch (error) {
-        console.error('Error fetching metadata:', error);
-      } finally {
-        // setMetadataLoading(false);
-      }
-    };
-    fetchMetadata();
-  }, []);
-
-
+export default function Page() {
   return (
     <>
       <Header />

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             </button> */}
             {/* Include the header */}
             {/* <Header /> */}
-            <section className='container pt-70 pb-60'>
+            <section className='container-fluid p-0 m-0'>
               {/* <Menu /> */}
               {/* <main className='fix' style={{ marginLeft: '285px' }}> */}
               <main className='fix'>
