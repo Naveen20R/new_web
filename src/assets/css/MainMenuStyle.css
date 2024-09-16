@@ -1,8 +1,15 @@
-.leftMenu-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 360px;
+.menu-img {
+    width: 2rem;
+    height: 2rem;
+}
 
+.menu-link {
+    color: #183354;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    background-color: #f8f9fa;
 }
 
 /* Ensure dropdown-container is positioned correctly */
@@ -15,7 +22,7 @@
 .dropdown-menu {
     display: block;
     position: absolute;
-    top:55px;
+    top: 55px;
     left: 0;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -61,7 +68,27 @@
 .main-menu-dropdown:hover .main-menu-title {
     color: var(--tg-primary-color);
 }
+
 .main-menu-dropdown:hover .fa-angle-down {
     color: var(--tg-primary-color);
 }
 
+
+
+
+.rs-dropdown-toggle-caret {
+    top: 0px !important;
+    position: unset !important;
+}
+
+.rs-dropdown-item-submenu.rs-dropdown-item>.rs-dropdown-item-toggle .rs-dropdown-menu-toggle-icon {
+    margin: 0;
+    /* position: absolute ; */
+    position: unset !important;
+
+    top: 0px !important;
+}
+
+.rs-dropdown-item.rs-dropdown-item-submenu .rs-dropdown-item-toggle {
+    padding: 4px 4px 4px 4px;
+}

@@ -20,14 +20,14 @@ function Header() {
           </Navbar.Brand>
           <Navbar.Toggle className="border-0 toggle-bar-parent">
 
-            <i class="fa-solid fa-bars toggle-bar" aria-controls={`offcanvasNavbar-expand-md`}></i>
+            <i className="fa-solid fa-bars toggle-bar" aria-controls={`offcanvasNavbar-expand-md`}></i>
           </Navbar.Toggle>
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-md`}
             aria-labelledby={`offcanvasNavbarLabel-expand-md`}
             placement="end" >
 
-            <Offcanvas.Header closeButton>
+            <Offcanvas.Header closeButton style={{background:'#f6f6f6'}}>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                 <Image src={logo} alt="Logo" width={160} height={40} />
               </Offcanvas.Title>
