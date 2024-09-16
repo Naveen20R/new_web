@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
 import Artical from '@/components/articals/Artical';
 import ArticalHeading from '@/components/articals/ArticalHeading';
+import ArticalSubHeading from '@/components/articals/ArticalSubHeading';
+import BreadCrump01 from '@/components/breadcrumb/BreadCrump01';
 
 export default function Page() {
   return (
@@ -24,6 +26,8 @@ export default function Page() {
           <div className="col-12 col-md-8" >
             <div className='spotlight-post-item-wrap'>
              <ArticalHeading/>
+             <ArticalSubHeading/>
+             <BreadCrump01/>
               <Artical/>
             </div>
           </div>

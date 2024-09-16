@@ -11,8 +11,7 @@ import '@/assets/css/articalStyle.css'
 import axios from '../config';
 // import { useDispatch, useSelector } from 'react-redux';
 import '@/assets/css/articalStyle.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
+
 import Artical from '@/components/articals/Artical';
 import ArticalHeading from '@/components/articals/ArticalHeading';
 import MenuWorkout from '@/layouts/MenuLayout';
@@ -53,9 +52,13 @@ export default function Home() {
       <div className="container my-3">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
-            <div className='spotlight-post-item-wrap'>
-             <ArticalHeading/>
-              <Artical/>
+            <div className="row gap-2">
+              <div className="col-12 ">
+                <Artical />
+              </div>
+              <div className="col-12">
+                <Artical />
+              </div>
             </div>
           </div>
           <div className="col" style={{ border: '2px solid red' }}>

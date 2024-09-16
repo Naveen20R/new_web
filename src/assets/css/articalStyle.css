@@ -241,7 +241,8 @@
 .current-date {
     display: flex;
     align-items: center;
-    color: var(--tg-icon-color);
+    /* color: var(--tg-icon-color); */
+    color:black;
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
@@ -249,33 +250,44 @@
     text-transform: uppercase;
     gap: 5px;
 }
-
-.phone-icon {
-    background-color: #145915;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+.posted-date-key{
+    font-weight: 800;
+    color: #4A4A4A;
+}
+.posted-date{
+    /* color: var(--tg-icon-color); */
+    font-weight: 600;
+    color:#595a5c;
 }
 
-.phone-icon:hover {
-    background-color: #1459152a;
-    color: #145915;
-}
-
-.fa-phone {
-    font-size: medium;
+.fa-whatsapp,
+.facebook-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .facebook-icon {
-    background-color: #18406b;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+    background: linear-gradient(45deg, #0776E9, #1191F3, #19A7FA);
 }
 
-.facebook-icon:hover {
-    background-color: #18406b55;
-    color: #18406b;
+.fa-whatsapp {
+    background-color: #41D061;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.fa-whatsapp:hover,.facebook-icon:hover{
+    box-shadow: 1px 0px 6px 3px rgba(0, 0, 0, 0.12);
 }
 
 .post-tag {
@@ -439,7 +451,7 @@
     gap: 10px;
     --arrow-hover-move-x: 110%;
     --arrow-hover-move-y: 100%;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .view-all-btn_1 .homeblog-link-btn_1 .svg-icon svg {
@@ -487,15 +499,41 @@
 .view-all-btn_1 .homeblog-link-btn_1:hover .svg-icon svg {
     color: var(--tg-white);
 }
-.view-all-btn_1 .homeblog-link-btn_1:hover{
- color:var(--tg-primary-color);
- text-decoration:underline;
+
+.view-all-btn_1 .homeblog-link-btn_1:hover {
+    color: var(--tg-primary-color);
+    text-decoration: underline;
 }
-.view-all-btn_1{
+
+/* .view-all-btn_1{
     border-bottom:1px solid rgb(228, 228, 228);
     padding-bottom:20px;
-}
+} */
 
 /* view more btn style end */
-
 /* artical style end */
+
+
+/* artical img style start */
+.artical-image {
+    width: 100% !important;
+    height: 250px;
+}
+
+/* artical img style end */
+/* style={{border:'2px solid red'}} */
+
+.read-more-btn-style {
+    /* background-color: #5b5c5c; */
+     background-color: #1eabe1;
+    padding: 5px 15px;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    font-weight:bolder;
+}
+
+.read-more-btn-style:hover {
+   color:#1B1212;
+   text-decoration:underline;
+}
