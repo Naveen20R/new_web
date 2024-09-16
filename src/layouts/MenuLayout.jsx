@@ -34,8 +34,8 @@ const MenuWorkout = () => {
             (category) => category.position === "more" && category.type2 !== "news"
         );
 
-        console.log(main,'main');
-        
+        console.log(main, 'main');
+
 
         setMainCategories(main.slice(0, 5));
         setMoreCategories([...more, ...main.slice(5)]);
@@ -45,6 +45,14 @@ const MenuWorkout = () => {
     const handleLinkClick = (categoryName) => {
         dispatch(fetchSelectCategory(categoryName));
     };
+
+    const truncateText = (text, maxLength) => {
+        if (text.length <= maxLength) {
+            return text;
+        }
+        return text.slice(0, maxLength) + '...';
+    };
+
 
     return (
         <div className="container my-4 mx-auto d-none d-md-block">
@@ -153,7 +161,7 @@ const MenuWorkout = () => {
                     )}
                 </div>
             </div> */}
-            <ButtonToolbar className="d-flex justify-content-start gap-4">
+            <ButtonToolbar className="d-flex justify-content-start gap-2">
                 {mainCategories.map((category) => (
                     <Dropdown
                         key={category.id}
@@ -167,7 +175,7 @@ const MenuWorkout = () => {
                                             : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
                                     }
                                 />
-                                {category.name}
+                                {truncateText(category.name, 10)}
                             </div>
                         }
                         trigger={['click', 'hover']}
@@ -207,8 +215,8 @@ const MenuWorkout = () => {
                             </div>
                         }
                         trigger={['click', 'hover']}
-                        style={{ flex: 1 }}
-                    >
+                        style={{ flex: 1 }}>
+
                         {moreCategories.map((category) => (
                             <Dropdown.Menu
                                 key={category.id}
@@ -226,8 +234,7 @@ const MenuWorkout = () => {
                                     </>
                                 }
                                 trigger={['click', 'hover']}
-                                className="fw-bold"
-                            >
+                                className="fw-bold">
                                 {!category.child ? (
                                     <Dropdown.Item
                                         as={Link}
@@ -238,13 +245,15 @@ const MenuWorkout = () => {
                                         {category.name}
                                     </Dropdown.Item>
                                 ) : (
+                                    //* In this dropdown show intead of right side show left side
                                     category.child.map((subCategory) => (
                                         <Dropdown.Item
                                             key={subCategory.id}
                                             as={Link}
+                                            title="leftStart" placement="leftStart"
                                             href={`/${subCategory.type2}/${subCategory.data_query}`}
                                             onClick={() => handleLinkClick(subCategory.name)}
-                                            className="fw-bold"
+                                            className="fw-bold" style={{ border: '2px solid green' }}
                                         >
                                             {subCategory.name}
                                         </Dropdown.Item>
