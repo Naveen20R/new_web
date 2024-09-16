@@ -13,7 +13,7 @@ function HeaderDropdown({datas}) {
           {datas.title}
         </a>
         {
-          showDrop ? <i class="fa-solid fa-angle-up my-auto"></i> : <i class="fa-solid fa-angle-down my-auto"></i>
+          showDrop ? <i className="fa-solid fa-angle-up my-auto"></i> : <i className="fa-solid fa-angle-down my-auto"></i>
         }
       </div>
       {

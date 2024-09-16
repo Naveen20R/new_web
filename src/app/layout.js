@@ -1,8 +1,11 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import {AuthProvider} from "@/provider/AuthContext";
+import { AuthProvider } from "@/provider/AuthContext";
 import ReduxProvider from "@/redux/ReduxProvider";
 import Header from "@/components/header/Header";
+
+import 'rsuite/dist/rsuite-no-reset.min.css';
+import { CustomProvider } from 'rsuite';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,19 +29,21 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AuthProvider>
           <ReduxProvider>
-            {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
+            <CustomProvider>
+              {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
               <FontAwesomeIcon icon={faAngleUp} />
             </button> */}
-            {/* Include the header */}
-            {/* <Header /> */}
-            <section className='container-fluid p-0 m-0'>
-              {/* <Menu /> */}
-              {/* <main className='fix' style={{ marginLeft: '285px' }}> */}
-              <main className='fix'>
-                {children}
-              </main>
-            </section>
-            {/* <CookieConsent /> */}
+              {/* Include the header */}
+              {/* <Header /> */}
+              <section className='container-fluid p-0 m-0'>
+                {/* <Menu /> */}
+                {/* <main className='fix' style={{ marginLeft: '285px' }}> */}
+                <main className='fix'>
+                  {children}
+                </main>
+              </section>
+              {/* <CookieConsent /> */}
+            </CustomProvider>
           </ReduxProvider>
         </AuthProvider>
       </body>

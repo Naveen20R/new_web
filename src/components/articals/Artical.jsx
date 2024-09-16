@@ -21,12 +21,12 @@ function Artical() {
         <div className="d-flex justify-content-start flew-row flex-wrap align-items-center gap-3">
           <a href='' className='text-white'>
             <span className='phone-icon  rounded-circle'>
-              <i class="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone"></i>
             </span>
           </a>
           <a href='' className='text-white'>
             <span className='facebook-icon  rounded-circle'>
-              <i class="fa-brands fa-facebook-f"></i>
+              <i className="fa-brands fa-facebook-f"></i>
             </span>
           </a>
         </div>

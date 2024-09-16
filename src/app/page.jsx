@@ -15,6 +15,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
 import Artical from '@/components/articals/Artical';
 import ArticalHeading from '@/components/articals/ArticalHeading';
+import MenuWorkout from '@/layouts/MenuLayout';
+// import Menu from '@/layouts/Menu';
+// import MenuWorkout from '@/layouts/Workout';
+
 
 export default function Home() {
   // const { categories, selectCategory } = useSelector((state) => state.categories);  // all datas
@@ -43,7 +47,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <MenuLayout />
+      <MenuWorkout />
+      {/* <Menu /> */}
+      {/* <MenuWorkout /> */}
       <div className="container my-3">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
