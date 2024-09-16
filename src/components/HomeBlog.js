@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faPhone, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { IMAGE_BASE_URL, DEFAULT_POST } from '../config/index';
 import { fetchSelectCategory } from '../actions/categoryAction';

@@ -21,6 +21,23 @@
    justify-content: space-between; 
 }
 
+/* .rs-dropdown-toggle-caret{
+    display:none;
+} */
+
+
+
+
+/*! drop stayle start */
+
+
+/*! drop stayle end */
+
+
+.rs-dropdown-toggle{
+    /* overflow:hidden; */
+}
+
 
 /* Ensure dropdown-container is positioned correctly */
 .dropdown-container {
