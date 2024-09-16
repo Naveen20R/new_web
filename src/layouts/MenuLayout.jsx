@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
 import { Dropdown, ButtonToolbar } from "rsuite";
 import { DEFAULT_CATEGORY, IMAGE_BASE_URL } from "../config";
-
-const MenuWorkout = () => {
+import '@/assets/css/MainMenuStyle.css'
+const Menu = () => {
     const dispatch = useDispatch();
     const { categories, selectCategory } = useSelector(
         (state) => state.categories
@@ -152,4 +152,4 @@ const MenuWorkout = () => {
     );
 };
 
-export default MenuWorkout;
+export default Menu;
