@@ -1,3 +1,5 @@
+"use client"
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -9,6 +11,7 @@ import logo from '@/assets/img/logo/Logo.jpeg';
 import Image from 'next/image';
 import HeaderLink from './HeaderLink';
 import HeaderDropdown from './HeaderDropdown';
+import MenuWorkout from '@/layouts/MenuLayout';
 
 function Header() {
   return (
