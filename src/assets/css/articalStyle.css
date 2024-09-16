@@ -323,10 +323,9 @@
     color: var(--tg-heading-font-color);
     font-size: 15px;
     margin-bottom: 20px;
-    line-height: 1.88;
+    line-height: 2;
     text-decoration: none;
     font-weight: 800;
-    margin:20px 0px;
 }
 
 .post-title:hover {
@@ -518,7 +517,7 @@
 /* artical img style start */
 .artical-image {
     width: 100% !important;
-    height: 250px;
+    height: 220px;
 }
 
 /* artical img style end */

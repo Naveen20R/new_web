@@ -1,12 +1,43 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from "react-redux";
 import ArticalHeading from './ArticalHeading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "@/assets/css/articalStyle.css";
+import axios from '../../config';
 
 const Artical = () => {
+  const dispatch = useDispatch();
+  const { categories, selectCategory } = useSelector(
+    (state) => state.categories
+  );
+
+  useEffect(() => {
+    const fetchTrendingPosts = async () => {
+      try {
+        const resSpotlight = await axios.get(`/api/user/spotlight`);
+        console.log(resSpotlight.data);
+        
+
+        // if (user) {
+        //   const likesResponse = await axios.get(`/api/user/getLikesByUser`, {
+        //     params: { id: user.id },
+        //   });
+        //   setClickedBlogArticleIconId(likesResponse.data.likes);
+        // }
+
+        // setNoPost(1);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchTrendingPosts();
+  }, []);
+
+
   return (
     <div className="artical" style={{ borderBottom: '1px solid rgb(228, 228, 228)', padding: '20px 0px' }}>
       <div className="card border-0">
@@ -24,7 +55,7 @@ const Artical = () => {
           <div className="col-md-8">
             <div className="p-1">
               <ArticalHeading title={''} />
-              <div className="d-flex mt-2 flex-wrap justify-content-start align-items-center gap-4">
+              <div className="d-flex my-3 flex-wrap justify-content-start align-items-center gap-4">
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-start w-100 gap-3">
                   <div className="current-date">
                     {/* <FontAwesomeIcon icon={faCalendar} /> */}
@@ -44,13 +75,10 @@ const Artical = () => {
                   </div>
                 </div>
               </div>
-
               <Link href="/" className='post-title'>
                 உயிர்ச்சத்து குறைவால் ஏற்படும் நோய்கள்.? உயிர்ச்சத்து அதிகரிக்க உணவு முறைகள்...!
               </Link>
-
-
-              <div className="d-flex flex-wrap gap-2 mt-2">
+              <div className="d-flex flex-wrap gap-2 my-3">
                 <Link href="" className='read-more-btn-style'>Read More</Link>
               </div>
             </div>

@@ -12,6 +12,16 @@
     background-color: #f8f9fa;
 }
 
+.rs-btn{
+    width:100% !important;
+}
+
+.rs-dropdown-toggle{
+   display: flex;
+   justify-content: space-between; 
+}
+
+
 /* Ensure dropdown-container is positioned correctly */
 .dropdown-container {
     position: relative;
@@ -72,9 +82,6 @@
 .main-menu-dropdown:hover .fa-angle-down {
     color: var(--tg-primary-color);
 }
-
-
-
 
 .rs-dropdown-toggle-caret {
     top: 0px !important;
