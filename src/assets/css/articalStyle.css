@@ -321,11 +321,12 @@
 
 .post-title {
     color: var(--tg-heading-font-color);
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 20px;
-    line-height: 1.28;
+    line-height: 1.88;
     text-decoration: none;
     font-weight: 800;
+    margin:20px 0px;
 }
 
 .post-title:hover {

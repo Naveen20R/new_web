@@ -43,11 +43,10 @@ const Artical = () => {
                   </div>
                 </div>
               </div>
-              <h2>
-                <Link href="/" className='post-title'>
-                  உயிர்ச்சத்து குறைவால் ஏற்படும் நோய்கள்.? உயிர்ச்சத்து அதிகரிக்க உணவு முறைகள்...!
-                </Link>
-              </h2>
+              <Link href="/" className='post-title' style={{border:'2px solid red'}}>
+                உயிர்ச்சத்து குறைவால் ஏற்படும் நோய்கள்.? உயிர்ச்சத்து அதிகரிக்க உணவு முறைகள்...!
+                உயிர்ச்சத்து குறைவால் ஏற்படும் நோய்கள்.? உயிர்ச்சத்து அதிகரிக்க உணவு முறைகள்...!
+              </Link>
 
               <div className="d-flex flex-wrap gap-2 mt-2">
                 <Link href="" className='read-more-btn-style'>Read More</Link>
