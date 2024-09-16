@@ -49,7 +49,7 @@ export default function Home() {
       <MenuWorkout />
       {/* <Menu /> */}
       {/* <MenuWorkout /> */}
-      <div className="container my-3">
+      <div className="container my-4">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
             <div className="row gap-2">
