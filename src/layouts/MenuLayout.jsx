@@ -40,7 +40,6 @@ const Menu = () => {
 
         console.log(main, 'main');
 
-
         setMainCategories(main.slice(0, 5));
         setMoreCategories([...more, ...main.slice(5)]);
     }, [categories]);
@@ -56,6 +55,9 @@ const Menu = () => {
         }
         return text.slice(0, maxLength) + '...';
     };
+
+    console.log(categories,'categories');
+    
 
 
     return (

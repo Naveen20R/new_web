@@ -43,9 +43,6 @@ export default function Home() {
               <div className="col-12 ">
                 <Artical />
               </div>
-              <div className="col-12">
-                <Artical />
-              </div>
             </div>
           </div>
           <div className="col" style={{ border: '2px solid red' }}>
