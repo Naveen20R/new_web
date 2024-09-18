@@ -2,9 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHomePosts } from "../actions/postAction";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import '@/assets/css/articalStyle.css';
 import "../assets/css/style.css";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
@@ -29,24 +26,21 @@ const Home = () => {
   const [metadataLoading, setMetadataLoading] = useState(true);
   const [metadata, setMetadata] = useState(null);
   const router = useRouter();
+
   const [message, setMessage] = useState(router.query?.message || "");
 
   useEffect(() => {
-    dispatch(fetchHomePosts()).then(() => setLoading(false));
-  }, [dispatch]);
+    // let obj = 
+    let array = [];
 
-  useEffect(() => {
-    const fetchMetadata = async () => {
-      try {
-        const res = await axios.get("/api/user/setting");
-        setMetadata(res.data);
-      } catch (error) {
-        console.error("Error fetching metadata:", error);
-      } finally {
-        setMetadataLoading(false);
-      }
-    };
-    fetchMetadata();
+    if (homePosts) {
+      homePosts.map((ele) => {
+        array.push({ category: ele.category, singlePost: ele.posts[0] })
+      })
+      setAllPost(array);
+
+
+    }
   }, []);
 
   useEffect(() => {
@@ -54,6 +48,7 @@ const Home = () => {
       const timer = setTimeout(() => {
         setMessage("");
       }, 2000); // 2 seconds delay
+
       // Cleanup timer on component unmount
       return () => clearTimeout(timer);
     }
@@ -87,20 +82,23 @@ const Home = () => {
             </div>
           </section>
         </div>
-        <div id="Ads" className="col" style={{ border: '1px solid red' }}></div>
-      </section> */}
+        {/* <div id="Ads" className="col" style={{ border: '1px solid red' }}></div> */}
+      {/* </section> */}
 
       {/* ===== Artical Home Page ===== */}
       {/* <div className="container my-3">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
             <div className="row gap-2">
-              <div className="col-12 ">
-                <Artical />
-              </div>
-              <div className="col-12">
-                <Artical />
-              </div>
+              {
+                allPost.map((ele) => {
+                  return (
+                    <div className="col-12 ">
+                      <Artical uniquePost = {ele} />
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
           <div className="col" style={{ border: '2px solid red' }}></div>
