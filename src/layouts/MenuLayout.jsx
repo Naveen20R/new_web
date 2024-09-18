@@ -10,7 +10,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
 import { Dropdown, ButtonToolbar, Nav, Sidenav, Sidebar } from "rsuite";
 import { DEFAULT_CATEGORY, IMAGE_BASE_URL } from "../config";
-import '@/assets/css/MainMenuStyle.css'
+import '@/assets/css/MainMenuStyle.css';
+import Drops01 from "@/components/drops/Drops01";
+
+
+
 const Menu = () => {
     const dispatch = useDispatch();
     const { categories, selectCategory } = useSelector(
@@ -45,6 +49,17 @@ const Menu = () => {
     const handleLinkClick = (categoryName) => {
         dispatch(fetchSelectCategory(categoryName));
     };
+
+    const truncateText = (text, maxLength) => {
+        if (text.length <= maxLength) {
+            return text;
+        }
+        return text.slice(0, maxLength) + '...';
+    };
+
+    console.log(categories,'categories');
+    
+
 
     return (
         <div className="container my-4 mx-auto d-none d-md-block">
@@ -192,7 +207,7 @@ const Menu = () => {
                                     key={category.id}
                                     title={
                                         <>
-                                            <img
+                                            <img style={{ border: '2px solid yellow' }}
                                                 className="menu-img rounded-circle mx-2"
                                                 src={
                                                     category.image
@@ -208,11 +223,11 @@ const Menu = () => {
                                 >
                                     {!category.child ? (
                                         <Dropdown.Item
+                                            style={{ border: '2px solid yellow' }}
                                             as={Link}
                                             href={`/${category.type2}/${category.data_query}`}
                                             onClick={() => handleLinkClick(category.name)}
-                                            className="fw-bold"
-                                        >
+                                            className="fw-bold">
                                             {category.name}
                                         </Dropdown.Item>
                                     ) : (
@@ -220,6 +235,7 @@ const Menu = () => {
                                             <Dropdown.Item
                                                 key={subCategory.id}
                                                 as={Link}
+                                                title="leftStart" placement="leftStart"
                                                 href={`/${subCategory.type2}/${subCategory.data_query}`}
                                                 onClick={() => handleLinkClick(subCategory.name)}
                                                 className="fw-bold"
