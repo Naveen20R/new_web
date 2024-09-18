@@ -11,7 +11,11 @@ import logo from '@/assets/img/logo/Logo.jpeg';
 import Image from 'next/image';
 import HeaderLink from './HeaderLink';
 import HeaderDropdown from './HeaderDropdown';
-import MenuWorkout from '@/layouts/MenuLayout';
+
+import Menu from '@/layouts/MenuLayout';
+import HeaderLayout from './HeaderLayout';
+
+// import { Sidenav, Nav } from 'rsuite';
 
 function Header() {
   return (
@@ -22,7 +26,6 @@ function Header() {
             <Image src={logo} alt="Logo" width={160} height={40} />
           </Navbar.Brand>
           <Navbar.Toggle className="border-0 toggle-bar-parent">
-
             <i className="fa-solid fa-bars toggle-bar" aria-controls={`offcanvasNavbar-expand-md`}></i>
           </Navbar.Toggle>
           <Navbar.Offcanvas
@@ -30,37 +33,53 @@ function Header() {
             aria-labelledby={`offcanvasNavbarLabel-expand-md`}
             placement="end" >
 
-            <Offcanvas.Header closeButton style={{background:'#f6f6f6'}}>
+            <Offcanvas.Header closeButton style={{ background: '#f6f6f6' }}>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                 <Image src={logo} alt="Logo" width={160} height={40} />
               </Offcanvas.Title>
             </Offcanvas.Header>
-
             <Offcanvas.Body className='p-0'>
-              <Nav className="justify-content-end  d-md-none  flex-grow-1 pe-3">
-                <HeaderLink />
-                <HeaderDropdown datas={{ title: 'Home', dropDesc: "child Home" }} />
-                <HeaderDropdown datas={{ title: 'Home', dropDesc: "child Home" }} />
-                <HeaderDropdown datas={{ title: 'Home', dropDesc: "child Home" }} />
-                {/* <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link> */}
-                {/* <NavDropdown
-                  title="Dropdown"
-                  id={`offcanvasNavbarDropdown-expand-md`}>
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown> */}
-              </Nav>
+
+              {/* <Nav> */}
+
+                {/* <Nav className="justify-content-end  d-md-none  flex-grow-1 pe-3"> */}
+                {/* <HeaderLink /> */}
+                {/* <HeaderDropdown data={{ title: 'Home', dropDesc: ['data','child']}} /> */}
+                {/* <HeaderDropdown data={{ title: 'Home', dropDesc: "test Home" }} /> */}
+                {/* <HeaderDropdown data={{ title: 'Home', dropDesc: "child Home" }} /> */}
+
+                {/* <Menu /> */}
+                {/* </Nav> */}
+                {/* <Nav activeKey="1">
+                    <Nav.Item eventKey="1" >
+                      Dashboard
+                    </Nav.Item>
+                    <Nav.Item eventKey="2" >
+                      User Group
+                    </Nav.Item>
+                    <Nav.Menu eventKey="3" title="Advanced" >
+                      <Nav.Item eventKey="3-1">Geo</Nav.Item>
+                      <Nav.Item eventKey="3-2">Devices</Nav.Item>
+                      <Nav.Item eventKey="3-3">Loyalty</Nav.Item>
+                      <Nav.Item eventKey="3-4">Visit Depth</Nav.Item>
+                    </Nav.Menu>
+                    <Nav.Menu eventKey="4" title="Settings" >
+                      <Nav.Item eventKey="4-1">Applications</Nav.Item>
+                      <Nav.Item eventKey="4-2">Channels</Nav.Item>
+                      <Nav.Item eventKey="4-3">Versions</Nav.Item>
+                      <Nav.Menu eventKey="4-5" title="Custom Action">
+                        <Nav.Item eventKey="4-5-1">Action Name</Nav.Item>
+                        <Nav.Item eventKey="4-5-2">Action Params</Nav.Item>
+                      </Nav.Menu>
+                    </Nav.Menu> */}
+
+                <HeaderLayout />
+
+              {/* </Nav> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
-      </Navbar>
+      </Navbar >
     </>
   );
 }

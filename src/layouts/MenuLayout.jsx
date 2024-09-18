@@ -8,7 +8,7 @@ import {
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faMoneyCheck } from "@fortawesome/free-solid-svg-icons";
-import { Dropdown, ButtonToolbar } from "rsuite";
+import { Dropdown, ButtonToolbar, Nav, Sidenav, Sidebar } from "rsuite";
 import { DEFAULT_CATEGORY, IMAGE_BASE_URL } from "../config";
 import '@/assets/css/MainMenuStyle.css'
 const Menu = () => {
@@ -34,8 +34,8 @@ const Menu = () => {
             (category) => category.position === "more" && category.type2 !== "news"
         );
 
-        console.log(main,'main');
-        
+        console.log(main, 'main');
+
 
         setMainCategories(main.slice(0, 5));
         setMoreCategories([...more, ...main.slice(5)]);
@@ -48,54 +48,134 @@ const Menu = () => {
 
     return (
         <div className="container my-4 mx-auto d-none d-md-block">
-            {/* <div className="row gap-4">
-                <div className="col-md-9 border">
-                    {mainCategories.map((category) => (
-                        <Dropdown
-                            key={category.id}
-                            title={
-                                <div className="fw-bold">
-                                    <img
-                                        className="menu-img rounded-circle mx-2"
-                                        src={
-                                            category.image
-                                                ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
-                                                : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
-                                        }
-                                    />
-                                    {category.name}
-                                </div>
-                            }
-                            trigger={['click', 'hover']}
-                            style={{ flex: 1 }}
-                        >
-                            {!category.child ? (
+            <ButtonToolbar className="d-flex justify-content-center gap-2 flex-wrap flex-xl-nowrap align-items-start">
+                {/* Main Categories */}
+                {mainCategories.map((category) => (
+                    <Dropdown
+                        key={category.id}
+                        title={
+                            <div className="fw-bold">
+                                <img
+                                    className="menu-img rounded-circle mx-2"
+                                    src={
+                                        category.image
+                                            ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
+                                            : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
+                                    }
+                                />
+                                {category.name.length > 10 ? (category.name.slice(0, 10) + '...') : category.name}
+                            </div>
+
+                        }
+                        trigger={['click', 'hover']}
+
+                    >
+                        {!category.child ? (
+                            <Dropdown.Item
+                                as={Link}
+                                href={`/${category.type2}/${category.data_query}`}
+                                onClick={() => handleLinkClick(category.name)}
+                                className="fw-bold"
+                            >
+                                {category.name}
+                            </Dropdown.Item>
+                        ) : (
+                            category.child.map((subCategory) => (
                                 <Dropdown.Item
+                                    key={subCategory.id}
                                     as={Link}
-                                    href={`/${category.type2}/${category.data_query}`}
-                                    onClick={() => handleLinkClick(category.name)}
+                                    href={`/${subCategory.type2}/${subCategory.data_query}`}
+                                    onClick={() => handleLinkClick(subCategory.name)}
                                     className="fw-bold"
                                 >
-                                    {category.name}
+                                    {subCategory.name}
                                 </Dropdown.Item>
-                            ) : (
-                                category.child.map((subCategory) => (
-                                    <Dropdown.Item
-                                        key={subCategory.id}
-                                        as={Link}
-                                        href={`/${subCategory.type2}/${subCategory.data_query}`}
-                                        onClick={() => handleLinkClick(subCategory.name)}
-                                        className="fw-bold"
-                                    >
-                                        {subCategory.name}
-                                    </Dropdown.Item>
-                                ))
-                            )}
-                        </Dropdown>
-                    ))}
-                </div>
-                <div className="col border">
-                    {moreCategories.length > 0 && (
+                            ))
+                        )}
+                    </Dropdown >
+                ))}
+
+                {/* More Categories */}
+
+                {moreCategories.length > 0 && (
+                    // <Sidebar style={{borderRadius:'50%'}}>
+                    <div>
+
+                        <Sidenav style={{ width: '220px', height: '40px' }} className="rounded">
+                            <Nav >
+                                <Nav.Menu
+                                    title={
+                                        <div className="fw-bold d-flex align-items-center">
+                                            <FontAwesomeIcon icon={faMoneyCheck} className="mx-2 menu-img" />
+                                            View More
+                                        </div>
+                                    }
+                                    className="more-menu"
+                                >
+                                    {moreCategories.map((category) => (
+                                        <>
+                                            {!category.child ? (
+                                                <Nav.Item
+                                                    eventKey={category.id}
+                                                    as={Link}
+                                                    href={`/${category.type2}/${category.data_query}`}
+                                                    onClick={() => handleLinkClick(category.name)}
+                                                    className="fw-bold"
+                                                >
+                                                    <div className="fw-bold mx-2">
+                                                        <img
+                                                            className="menu-img rounded-circle me-2"
+                                                            src={
+                                                                category.image
+                                                                    ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
+                                                                    : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
+                                                            }
+                                                        />
+                                                                                                                   {category.name.length > 11 ? (category.name.slice(0, 11) + '...') : category.name}
+
+                                                    </div>
+                                                </Nav.Item>
+                                            ) : (
+                                                <Nav.Menu
+                                                    eventKey={category.id}
+                                                    title={
+                                                        <div className="fw-bold">
+                                                            <img
+                                                                className="menu-img rounded-circle me-2"
+                                                                src={
+                                                                    category.image
+                                                                        ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
+                                                                        : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
+                                                                }
+                                                            />
+                                                            {category.name.length > 11 ? (category.name.slice(0, 11) + '...') : category.name}
+                                                        </div>
+                                                    }
+                                                >
+                                                    {category.child.map((subCategory) => (
+                                                        <Nav.Item
+                                                            eventKey={subCategory.id}
+                                                            as={Link}
+                                                            href={`/${subCategory.type2}/${subCategory.data_query}`}
+                                                            onClick={() => handleLinkClick(subCategory.name)}
+                                                            className="fw-bold mx-3 my-1"
+                                                        >
+                                                            {subCategory.name}
+                                                        </Nav.Item>
+                                                    ))}
+                                                </Nav.Menu >
+                                            )}
+                                        </>
+                                    ))}
+                                </Nav.Menu>
+                            </Nav>
+                        </Sidenav>
+                    </div>
+                    // </Sidebar>
+                )}
+
+                {/* {
+                    moreCategories.length > 0 && (
                         <Dropdown
                             title={
                                 <div className="fw-bold d-flex align-items-center">
@@ -104,7 +184,8 @@ const Menu = () => {
                                 </div>
                             }
                             trigger={['click', 'hover']}
-                            style={{ flex: 1 }}
+                        // placement="leftStart"
+
                         >
                             {moreCategories.map((category) => (
                                 <Dropdown.Menu
@@ -123,7 +204,7 @@ const Menu = () => {
                                         </>
                                     }
                                     trigger={['click', 'hover']}
-                                    className="fw-bold"
+                                    className="fw-bold "
                                 >
                                     {!category.child ? (
                                         <Dropdown.Item
@@ -150,111 +231,13 @@ const Menu = () => {
                                 </Dropdown.Menu>
                             ))}
                         </Dropdown>
-                    )}
-                </div>
-            </div> */}
-            <ButtonToolbar className="d-flex justify-content-start gap-4">
-                {mainCategories.map((category) => (
-                    <Dropdown
-                        key={category.id}
-                        title={
-                            <div className="fw-bold">
-                                <img
-                                    className="menu-img rounded-circle mx-2"
-                                    src={
-                                        category.image
-                                            ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
-                                            : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
-                                    }
-                                />
-                                {category.name}
-                            </div>
-                        }
-                        trigger={['click', 'hover']}
-                        style={{ flex: 1 }}
-                    >
-                        {!category.child ? (
-                            <Dropdown.Item
-                                as={Link}
-                                href={`/${category.type2}/${category.data_query}`}
-                                onClick={() => handleLinkClick(category.name)}
-                                className="fw-bold"
-                            >
-                                {category.name}
-                            </Dropdown.Item>
-                        ) : (
-                            category.child.map((subCategory) => (
-                                <Dropdown.Item
-                                    key={subCategory.id}
-                                    as={Link}
-                                    href={`/${subCategory.type2}/${subCategory.data_query}`}
-                                    onClick={() => handleLinkClick(subCategory.name)}
-                                    className="fw-bold"
-                                >
-                                    {subCategory.name}
-                                </Dropdown.Item>
-                            ))
-                        )}
-                    </Dropdown>
-                ))}
+                    )
+                } */}
 
-                {moreCategories.length > 0 && (
-                    <Dropdown
-                        title={
-                            <div className="fw-bold d-flex align-items-center">
-                                <FontAwesomeIcon icon={faMoneyCheck} className="mx-2 menu-img" />
-                                View More
-                            </div>
-                        }
-                        trigger={['click', 'hover']}
-                        style={{ flex: 1 }}
-                    >
-                        {moreCategories.map((category) => (
-                            <Dropdown.Menu
-                                key={category.id}
-                                title={
-                                    <>
-                                        <img
-                                            className="menu-img rounded-circle mx-2"
-                                            src={
-                                                category.image
-                                                    ? IMAGE_BASE_URL + "category/" + category.type2 + "/" + category.image
-                                                    : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
-                                            }
-                                        />
-                                        {category.name}
-                                    </>
-                                }
-                                trigger={['click', 'hover']}
-                                className="fw-bold"
-                            >
-                                {!category.child ? (
-                                    <Dropdown.Item
-                                        as={Link}
-                                        href={`/${category.type2}/${category.data_query}`}
-                                        onClick={() => handleLinkClick(category.name)}
-                                        className="fw-bold"
-                                    >
-                                        {category.name}
-                                    </Dropdown.Item>
-                                ) : (
-                                    category.child.map((subCategory) => (
-                                        <Dropdown.Item
-                                            key={subCategory.id}
-                                            as={Link}
-                                            href={`/${subCategory.type2}/${subCategory.data_query}`}
-                                            onClick={() => handleLinkClick(subCategory.name)}
-                                            className="fw-bold"
-                                        >
-                                            {subCategory.name}
-                                        </Dropdown.Item>
-                                    ))
-                                )}
-                            </Dropdown.Menu>
-                        ))}
-                    </Dropdown>
-                )}
-            </ButtonToolbar>
+            </ButtonToolbar >
+
+
+
         </div>
     );
 };
