@@ -1,14 +1,14 @@
 import React,{useEffect} from 'react';
 import Link from 'next/link';
 import { useDispatch, useSelector } from "react-redux";
-import ArticalHeading from './ArticalHeading';
+import ArticalHeading from '../articals/ArticalHeading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "@/assets/css/articalStyle.css";
 import axios from '../../config';
 
-const Artical = () => {
+const ViewAll = () => {
   const dispatch = useDispatch();
   const { categories, selectCategory } = useSelector(
     (state) => state.categories
@@ -54,7 +54,6 @@ const Artical = () => {
 
           <div className="col-md-8">
             <div className="p-1">
-              <ArticalHeading title={''} />
               <div className="d-flex my-3 flex-wrap justify-content-start align-items-center gap-4">
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-start w-100 gap-3">
                   <div className="current-date">
@@ -90,4 +89,4 @@ const Artical = () => {
 
 }
 
-export default Artical;
+export default ViewAll;

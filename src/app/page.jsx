@@ -7,8 +7,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@/assets/css/articalStyle.css';
 import "../assets/css/style.css";
 import Loader from "@/components/Loader";
-import Head from "next/head";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 import Link from 'next/link';
 import axios from '../config';
 import { IMAGE_BASE_URL } from "../config";
@@ -17,6 +17,11 @@ import Artical from '@/components/articals/Artical';
 import ArticalHeading from '@/components/articals/ArticalHeading';
 import SpotLightSection from '@/components/home/SpotLight';
 import CategoriesWithBlogSection from '@/components/home/CategoriesWithBlog';
+import ViewAll from "@/components/ViewAll/ViewAll";
+import ViewAllBreadcrumb from "@/components/ViewAll/ViewAllBreadcrumb";
+import SubCategoryLink from "@/components/ViewAll/SubCategoryLink";
+import ViewAllPagination from "@/components/ViewAll/ViewAllPagination";
+import ReadMoreBreadcrumb from "@/components/ReadMore/ReadMoreBreadcrumb";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -24,7 +29,6 @@ const Home = () => {
   const [metadataLoading, setMetadataLoading] = useState(true);
   const [metadata, setMetadata] = useState(null);
   const router = useRouter();
-
   const [message, setMessage] = useState(router.query?.message || "");
 
   useEffect(() => {
@@ -50,7 +54,6 @@ const Home = () => {
       const timer = setTimeout(() => {
         setMessage("");
       }, 2000); // 2 seconds delay
-
       // Cleanup timer on component unmount
       return () => clearTimeout(timer);
     }
@@ -60,7 +63,7 @@ const Home = () => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         {
           <link
             rel="icon"
@@ -76,7 +79,7 @@ const Home = () => {
             <div className="spotlight-post-inner-wrap">
               <div className="row justify-content-center">
                 <div className="col-lg-12 col-md-12 col-12">
-                  {/* <SpotLightSection /> */}
+                  <SpotLightSection />
                   <CategoriesWithBlogSection />
                 </div>
                 <div className="col-lg-4"></div>
@@ -84,28 +87,72 @@ const Home = () => {
             </div>
           </section>
         </div>
-        {/* <div id="Ads" className="col" style={{ border: '1px solid red' }}></div> */}
-      </section>
+        <div id="Ads" className="col" style={{ border: '1px solid red' }}></div>
+      </section> */}
 
-      <div className="container my-3">
+      {/* ===== Artical Home Page ===== */}
+      {/* <div className="container my-3">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
             <div className="row gap-2">
               <div className="col-12 ">
                 <Artical />
               </div>
-
               <div className="col-12">
                 <Artical />
               </div>
-
             </div>
           </div>
-          <div className="col" style={{ border: '2px solid red' }}>
-
-          </div>
+          <div className="col" style={{ border: '2px solid red' }}></div>
         </div>
-      </div>
+      </div> */}
+
+      {/* ===== Category View All Page ===== */}
+      {/* <div className="container mb-3">
+        <ViewAllBreadcrumb />
+        <SubCategoryLink />
+        <div className="row gap-2">
+          <div className="col-12 col-lg-8" >
+              <div className="col-12 ">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+          </div>
+          <div className="col" style={{ border: '2px solid red' }}></div>
+        </div>
+        <ViewAllPagination />
+      </div> */}
+
+      {/* ===== Content Read More Page ===== */}
+
+      {/* <div className="container mb-3">
+        <ReadMoreBreadcrumb />
+        <div className="row gap-2">
+          <div className="col-12 col-lg-8" >
+              <div className="col-12 ">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+              <div className="col-12">
+                <ViewAll />
+              </div>
+          </div>
+          <div className="col" style={{ border: '2px solid red' }}></div>
+        </div>
+      </div> */}
     </>
   );
 };
