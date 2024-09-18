@@ -58,7 +58,7 @@ const Menu = () => {
     };
 
     // console.log(categories,'categories');
-    
+
 
 
     return (
@@ -120,8 +120,8 @@ const Menu = () => {
                             <Nav >
                                 <Nav.Menu
                                     title={
-                                        <div className="fw-bold d-flex align-items-center">
-                                            <FontAwesomeIcon icon={faMoneyCheck} className="mx-2 menu-img" />
+                                        <div className="fw-semibold d-flex align-items-center">
+                                            <FontAwesomeIcon icon={faMoneyCheck} className="mx-2 menu-img fs-6" />
                                             View More
                                         </div>
                                     }
@@ -146,8 +146,7 @@ const Menu = () => {
                                                                     : IMAGE_BASE_URL + "category/" + category.type2 + "/" + DEFAULT_CATEGORY
                                                             }
                                                         />
-                                                                                                                   {category.name.length > 11 ? (category.name.slice(0, 11) + '...') : category.name}
-
+                                                        {category.name.length > 11 ? (category.name.slice(0, 11) + '...') : category.name}
                                                     </div>
                                                 </Nav.Item>
                                             ) : (

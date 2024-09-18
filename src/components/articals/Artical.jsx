@@ -10,13 +10,12 @@ import axios from '../../config';
 
 const Artical = ({ uniquePost }) => {
   const dispatch = useDispatch();
+
   const { categories, selectCategory } = useSelector(
     (state) => state.categories
   );
 
   console.log(uniquePost, 'unique');
-
-
 
   return (
     <div className="artical" style={{ borderBottom: '1px solid rgb(228, 228, 228)', padding: '20px 0px' }}>
@@ -34,7 +33,9 @@ const Artical = ({ uniquePost }) => {
           </div>
           <div className="col-md-8">
             <div className="p-1">
-              <ArticalHeading title={uniquePost.category} />
+              <ArticalHeading 
+              title={uniquePost.category}
+               />
               <div className="d-flex my-3 flex-wrap justify-content-start align-items-center gap-4">
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-start w-100 gap-3">
                   <div className="current-date">

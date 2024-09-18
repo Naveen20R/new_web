@@ -29,7 +29,7 @@ const ViewAllPagination = () => {
   const [limit, setLimit] = useState(30);
 
   return (
-    <section className='col-12 col-lg-8 my-4'>
+    <section className=' my-4'>
       <Pagination
         layout={layout}
         size={size}

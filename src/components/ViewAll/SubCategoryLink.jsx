@@ -12,7 +12,7 @@ const SubCategoryLink = () => {
 
         // </div>
 
-        <ButtonToolbar className='col-12 col-lg-8 d-flex flex-wrap flex-md-nowrap border-bottom border-2 pb-2'>
+        <ButtonToolbar className=' d-flex flex-wrap flex-md-nowrap border-bottom border-2 pb-2'>
             <Button appearance="subtle" className='fw-bold' active>ஆன்மீகச் செய்திகள் </Button>
             <Button appearance="subtle" className='fw-bold'>ஆன்மீகக் குறிப்புகள்</Button>
             <Button appearance="subtle" className='fw-bold'>ஆன்மீகத் தளங்கள் </Button>
