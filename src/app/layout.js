@@ -4,6 +4,9 @@ import { AuthProvider } from "@/provider/AuthContext";
 import ReduxProvider from "@/redux/ReduxProvider";
 import { CustomProvider } from 'rsuite';
 import 'rsuite/dist/rsuite-no-reset.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '@/assets/css/articalStyle.css';
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faAngleUp } from "@fortawesome/free-solid-svg-icons";

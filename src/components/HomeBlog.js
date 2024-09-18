@@ -32,7 +32,7 @@ const HomeBlog = ({ title }) => {
         const response = homePosts.find((post) => post.category === title);
         if (response) {
           setPosts(response.posts);
-          console.log('Homeblog-response',response.posts);
+          // console.log('Homeblog-response',response.posts);
           
         }
 

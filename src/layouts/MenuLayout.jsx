@@ -38,7 +38,7 @@ const Menu = () => {
             (category) => category.position === "more" && category.type2 !== "news"
         );
 
-        console.log(main, 'main');
+        // console.log(main, 'main');
 
 
         setMainCategories(main.slice(0, 5));
@@ -57,7 +57,7 @@ const Menu = () => {
         return text.slice(0, maxLength) + '...';
     };
 
-    console.log(categories,'categories');
+    // console.log(categories,'categories');
     
 
 
