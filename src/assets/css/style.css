@@ -4040,7 +4040,7 @@ label {
   right: 40px;
 }
 
-.overlay-post-content .post-title {
+.overlay-post-content . {
   color: var(--tg-white);
   font-size: 28px;
   margin-bottom: 15px;
@@ -4055,7 +4055,7 @@ label {
   color: var(--tg-white);
 }
 
-.ta-overlay-post:hover .overlay-post-content .post-title a {
+.ta-overlay-post:hover .overlay-post-content . a {
   background-size: 100% 2px;
 }
 
@@ -4190,7 +4190,7 @@ label {
   color: var(--tg-white);
 }
 
-.popular-post .content .post-title {
+.popular-post .content . {
   margin-bottom: 8px;
   font-size: 18px;
   line-height: 1.4;

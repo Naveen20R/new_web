@@ -253,24 +253,26 @@
 .posted-date-key{
     font-weight: 800;
     color: #4A4A4A;
+    font-size: medium;
 }
 .posted-date{
     /* color: var(--tg-icon-color); */
     font-weight: 600;
     color:#595a5c;
+    font-size: small;
 }
 
 .fa-whatsapp,
 .facebook-icon {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -312,24 +314,18 @@
     text-decoration: underline !important;
 }
 
-/* .post-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    line-height: 1.4;
-} */
-
 .post-title {
-    color: var(--tg-heading-font-color);
-    font-size: 15px;
-    margin-bottom: 20px;
-    line-height: 2;
+    color: #1B1212 !important;
+    line-height: 0.48px !important;
+    font-size: 16px;
     text-decoration: none;
+    text-align-last: justify;
     font-weight: 800;
 }
 
 .post-title:hover {
     text-decoration: underline;
+    text-decoration-color: #28282B;
 
 }
 
@@ -525,15 +521,20 @@
 
 .read-more-btn-style {
     /* background-color: #5b5c5c; */
-     background-color: #1eabe1;
+     /* background-color: #1eabe1; */
     padding: 5px 15px;
     border-radius: 3px;
-    color: white;
+    /* color: white; */
     text-decoration: none;
     font-weight:bolder;
+    color:#0066b2;
+    border:1px solid #0066b2;
+    font-size:13px;
 }
 
 .read-more-btn-style:hover {
-   color:#1B1212;
-   text-decoration:underline;
+    /* color:#1B1212; */
+    color:white;
+    background-color:#0066b2;
+   /* text-decoration:underline; */
 }
