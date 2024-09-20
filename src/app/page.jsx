@@ -113,7 +113,7 @@ const Home = () => {
             {/* main card end */}
           </div>
           <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
-            <h2>Demos</h2>
+            <h2>Ads</h2>
           </div>
         </div>
       </div>

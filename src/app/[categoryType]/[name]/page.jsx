@@ -1,23 +1,27 @@
 'use client'
 import React from 'react';
-
 import ReadMore from "@/components/ReadMore/ReadMore";
-
+import SubCatLinks_02 from '@/components/category/SubCatLinks_02';
+import Artical from '@/components/articals/Artical';
+import '@/assets/css/homeStyle.css';
 // import "../assets/css/style.css";
 
 function page() {
     return (
         <>
             {/* ===== Content Read More Page ===== */}
-            {/* <hr /> */}
-            <div className="container mb-3">
+            <div className="container-fluid mb-3">
                 <div className="row gap-2">
-                    <div className="col-12 col-lg-8" >
-                        <div className="col-12 ">
-                            <ReadMore />
-                        </div>
+                    <div className="col-8" >
+                        {/* Submenus start */}
+                        <SubCatLinks_02 />
+                        {/* Submenus end */}
+
+                        {/* cards start */}
+                        <Artical />
+                        {/* cards end */}
                     </div>
-                    <div className="col" style={{ border: '2px solid red' }}></div>
+                    <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}></div>
                 </div>
             </div>
         </>
