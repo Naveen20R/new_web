@@ -39,7 +39,7 @@ function Header() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className='p-0'>
-              <HeaderLayout />
+                <HeaderLayout />
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>

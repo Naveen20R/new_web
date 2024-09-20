@@ -81,10 +81,12 @@ const Home = () => {
 
   if (loading || metadataLoading) return <Loader />;
 
+
+
   return (
     <>
       {/* ===== Artical Home Page ===== */}
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <div className="row gap-2">
           <div className="col-12 col-md-8" >
             <div className="row gap-2">
@@ -94,16 +96,14 @@ const Home = () => {
                     <div className="col-12 ">
                       <Artical uniquePost={ele} />
                     </div>
-
                   )
                 })
               }
-
             </div>
           </div>
           <div className="col" style={{ border: '2px solid red' }}></div>
         </div>
-      </div>
+      </div> */}
 
       {/* ===== Category View All Page ===== */}
 
@@ -131,26 +131,14 @@ const Home = () => {
       </div> */}
 
       {/* ===== Content Read More Page ===== */}
-      {/* <hr /> */}
-      {/* <div className="container mb-3"> */}
-      {/* <p>Read More</p> */}
-      {/* <div className="row gap-2">
+      {/* <div className="container mb-3">
+        <div className="row gap-2">
           <div className="col-12 col-lg-8" >
             <ReadMoreBreadcrumb />
-
             <div className="col-12 ">
               <ReadMore />
-            </div> */}
-      {/* <div className="col-12">
-                <ViewAll />
-              </div>
-              <div className="col-12">
-                <ViewAll />
-              </div>
-              <div className="col-12">
-                <ViewAll />
-              </div> */}
-      {/* </div>
+            </div>
+          </div>
           <div className="col" style={{ border: '2px solid red' }}></div>
         </div>
       </div> */}

@@ -37,10 +37,6 @@ const Menu = () => {
         const more = categories.filter(
             (category) => category.position === "more" && category.type2 !== "news"
         );
-
-        // console.log(main, 'main');
-
-
         setMainCategories(main.slice(0, 5));
         setMoreCategories([...more, ...main.slice(5)]);
     }, [categories]);
@@ -56,10 +52,6 @@ const Menu = () => {
         }
         return text.slice(0, maxLength) + '...';
     };
-
-    // console.log(categories,'categories');
-
-
 
     return (
         <div className="container my-4 mx-auto d-none d-md-block">
@@ -250,9 +242,6 @@ const Menu = () => {
                 } */}
 
             </ButtonToolbar >
-
-
-
         </div>
     );
 };

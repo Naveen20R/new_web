@@ -12,7 +12,8 @@ import '@/assets/css/articalStyle.css';
 // import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "@/components/header/Header";
-import Menu from "@/layouts/MenuLayout";
+import NewMenu from "@/layouts/Menu";
+// import Menu from "@/layouts/MenuLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,11 +42,12 @@ const RootLayout = ({ children }) => {
               {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
                 <FontAwesomeIcon icon={faAngleUp} />
               </button> */}
-              {/* Include the header */}
               <Header />
+              <NewMenu />
+
               <section className='container py-1'>
                 {/* <Menu /> */}
-                <Menu />
+
                 <main className='fix'>
                   {children}
                 </main>
