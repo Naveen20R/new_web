@@ -159,7 +159,7 @@ const Menu = () => {
     return (
         <section className='d-none d-md-block container-fluid bg-light '>
             <nav className='container w-100 text-center mb-1 '>
-                <ul className=' list-unstyled position-sticky z-2 d-flex justify-content-center gap-2 flex-wrap align-items-start'>
+                <ul className=' list-unstyled position-sticky z-3 d-flex justify-content-center gap-2 flex-wrap align-items-start'>
                     {mainCategories.map((category) => (
                         <>
                             {!category.child ?
@@ -249,7 +249,7 @@ const Menu = () => {
                                                     <a
                                                         href={`/${category.type2}/${category.data_query}`}
                                                         onClick={() => handleLinkClick(category.name)}
-                                                        className=' rounded px-4 py-1 col-4 w-100'
+                                                        className=' rounded px-4 py-1 w-100'
                                                     >
                                                         <img
                                                             className="menu-img rounded-circle me-2"

@@ -25,7 +25,7 @@
     /* Optional: Background to cover the line under the title */
     padding: 5px 20px;
     /* Space on the sides of the title */
-    z-index: 10;
+    z-index: 1;
     /* Ensure the title is above the line */
     border: 1px solid black;
 

@@ -12,7 +12,8 @@ import '@/assets/css/articalStyle.css';
 // import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "@/components/header/Header";
-import NewMenu from "@/layouts/Menu";
+// import NewMenu from "@/layouts/Menu";
+import Menu from "@/layouts/Menu";
 // import Menu from "@/layouts/MenuLayout";
 
 const geistSans = localFont({
@@ -43,9 +44,10 @@ const RootLayout = ({ children }) => {
                 <FontAwesomeIcon icon={faAngleUp} />
               </button> */}
               <Header />
-              <NewMenu />
+              <Menu />
 
               <section className='container py-1'>
+
                 {/* <Menu /> */}
                 {/* <Menu /> */}
                 <main className='fix'>
