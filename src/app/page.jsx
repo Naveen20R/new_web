@@ -33,6 +33,7 @@ import NormalCard from "@/components/articals/NormalCard";
 import CatHead from "@/components/category/CatHead";
 import SubCatLinks from "@/components/category/SubCatLinks";
 import CatMain from "@/components/category/CatMain";
+import '@splidejs/splide/dist/css/splide.min.css';
 
 const Home = () => {
   const dispatch = useDispatch();

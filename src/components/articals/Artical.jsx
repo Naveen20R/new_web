@@ -28,7 +28,7 @@ const Artical = () => {
               <h2 className='tag'>ஆரோக்கிய உணவு</h2>
             </div>
           </div>
-          <div className="col-md-8 col-12">
+          <div className="col-md-8 col-12 ">
             <div className="mx-3">
               <div className="d-flex flex-wrap justify-content-start align-items-center gap-4 mb-2">
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-start w-100 gap-3">
