@@ -47,7 +47,7 @@ const RootLayout = ({ children }) => {
 
               <section className='container py-1'>
                 {/* <Menu /> */}
-
+                {/* <Menu /> */}
                 <main className='fix'>
                   {children}
                 </main>

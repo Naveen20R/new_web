@@ -1,0 +1,10 @@
+.singleCard{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:1px solid #0065b243;
+    border-radius:0px;
+}
+.card-img-top{
+    border-radius:0px 0px 12px 0px;
+}

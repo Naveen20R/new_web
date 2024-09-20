@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchHomePosts } from "../actions/postAction";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
-import '@/assets/css/homeStyle.css';
+// import '@/assets/css/articalStyle.css';
 import "../assets/css/style.css";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
@@ -23,16 +23,6 @@ import SubCategoryLink from "@/components/ViewAll/SubCategoryLink";
 import ViewAllPagination from "@/components/ViewAll/ViewAllPagination";
 import ReadMoreBreadcrumb from "@/components/ReadMore/ReadMoreBreadcrumb";
 import ReadMore from "@/components/ReadMore/ReadMore";
-import SmallCard from "@/components/articals/SmallCard";
-import img from '@/assets/img/logo/right-up (3).png'; // Use `img` directly
-import img_2 from '@/assets/img/logo/right-up.png'; // Use `img` directly
-import Image from 'next/image';
-
-import VerticalCard from "@/components/articals/VerticalCard";
-import NormalCard from "@/components/articals/NormalCard";
-import CatHead from "@/components/category/CatHead";
-import SubCatLinks from "@/components/category/SubCatLinks";
-import CatMain from "@/components/category/CatMain";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -90,32 +80,89 @@ const Home = () => {
   }, [message]);
 
   if (loading || metadataLoading) return <Loader />;
-  let title = "உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்."
 
   return (
     <>
       {/* ===== Artical Home Page ===== */}
-      <div className="container">
-        <div className="row my-5 gap-3" >
-          <div className="col-12 col-md-8">
+      <div className="container my-3">
+        <div className="row gap-2">
+          <div className="col-12 col-md-8" >
+            <div className="row gap-2">
+              {
+                allPost.map((ele) => {
+                  return (
+                    <div className="col-12 ">
+                      <Artical uniquePost={ele} />
+                    </div>
 
-            {/* Tiitle start */}
-            <CatHead />
-            {/* Tiitle end */}
+                  )
+                })
+              }
 
-            {/* Category start */}
-            <SubCatLinks />
-            {/* Category end */}
-
-            {/* main card start */}
-            <CatMain />
-            {/* main card end */}
+            </div>
           </div>
-          <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
-            <h2>Demos</h2>
-          </div>
+          <div className="col" style={{ border: '2px solid red' }}></div>
         </div>
       </div>
+
+      {/* ===== Category View All Page ===== */}
+
+      {/* <div className="container mb-3">
+        <div className="row gap-2">
+          <div className="col-12 col-lg-8" >
+            <ViewAllBreadcrumb />
+            <SubCategoryLink />
+            <div className="col-12 ">
+              <ViewAll />
+            </div>
+            <div className="col-12">
+              <ViewAll />
+            </div>
+            <div className="col-12">
+              <ViewAll />
+            </div>
+            <div className="col-12">
+              <ViewAll />
+            </div>
+            <ViewAllPagination />
+          </div>
+          <div className="col" style={{ border: '2px solid red' }}></div>
+        </div>
+      </div> */}
+
+     
+
+
+
+
+
+      {/* =========== Previous Version Code ============ */}
+      {/* <Head>
+        {
+          <link
+            rel="icon"
+            href={`${IMAGE_BASE_URL}setting/${DEFAULT_FAVICON}`}
+            type="image/png"
+          />
+        }
+      </Head>
+      {message && <div className="alert success-message">{message}</div>}
+      <section className="row gap-2">
+        <div className="col-lg-8 col-md-12 col-12">
+          <section className="spotlight-post-area pt-20 pb-60">
+            <div className="spotlight-post-inner-wrap">
+              <div className="row justify-content-center">
+                <div className="col-lg-12 col-md-12 col-12">
+                  <SpotLightSection />
+                  <CategoriesWithBlogSection />
+                </div>
+                <div className="col-lg-4"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id="Ads" className="col" style={{ border: '1px solid red' }}></div>
+      </section> */}
     </>
   );
 };

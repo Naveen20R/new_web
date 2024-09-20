@@ -1,0 +1,21 @@
+.desc-1 {
+    font-size: 15px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.desc-1:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#main-category-2 {
+    border-right: 1px solid rgba(0, 101, 178, 0.263);
+}
+
+@media(max-width:991px) {
+    #main-category-2 {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 101, 178, 0.263);
+    }
+}
