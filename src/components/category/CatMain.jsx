@@ -7,7 +7,7 @@ import Link from 'next/link';
 function CatMain() {
     const splideRef = useRef();
     const [currentIndex, setCurrentIndex] = useState(0);
-    const totalSlides = 2; // Update this based on the number of slides
+    const totalSlides = 2;
 
     useEffect(() => {
         if (splideRef.current) {
@@ -29,9 +29,6 @@ function CatMain() {
         }
     };
 
-const image = [10, 33, 100, 1015, 51, 1031]
-
-
     return (
         <>
             <div className="row " style={{ borderBottom: '1px solid rgba(0, 101, 178, 0.263)' }}>
@@ -43,7 +40,7 @@ const image = [10, 33, 100, 1015, 51, 1031]
                         <Splide
                             options={{
                                 type: 'slide', // Change to 'slide' for non-looping
-                                perPage: 1,
+                                perPage: 3,
                                 pagination: false, // Disable pagination circles
                                 arrows: false, // Disable default arrows
                                 autoplay: false, // Disable autoplay
@@ -72,10 +69,38 @@ const image = [10, 33, 100, 1015, 51, 1031]
                                         <img
                                             className="card-img-top small-card-img"
                                             src="https://img-cdn.thepublive.com/fit-in/360x0/filters:format(webp)/tamil-ie/media/media_files/uploads/2020/10/Curry-leaves-kolambu-resized.jpg"
-                                            alt="Card image cap"
-                                        />
+                                            alt="Card image cap" />
                                     </div>
-
+                                    <div className="card-body">
+                                        <Link href="#" className='small-card-title'>
+                                            {" உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் ".slice(0, 100)}...
+                                        </Link>
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                            <SplideSlide>
+                                <div className="main-cards">
+                                    <div className="main-img-parent">
+                                        <img
+                                            className="card-img-top main-card-img"
+                                            src={`https://picsum.photos/id/10/200/100`} 
+                                            alt="Card image cap" />
+                                    </div>
+                                    <div className="card-body">
+                                        <Link href="#" className='main-card-title'>
+                                            {" உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் ".slice(0, 100)}...
+                                        </Link>
+                                    </div>
+                                </div>
+                            </SplideSlide>
+                            <SplideSlide>
+                                <div className="sliders-cards">
+                                    <div className="slider-img-parent">
+                                        <img
+                                            className="card-img-top small-card-img"
+                                            src="https://img-cdn.thepublive.com/fit-in/360x0/filters:format(webp)/tamil-ie/media/media_files/uploads/2020/10/Curry-leaves-kolambu-resized.jpg"
+                                            alt="Card image cap" />
+                                    </div>
                                     <div className="card-body">
                                         <Link href="#" className='small-card-title'>
                                             {" உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் ".slice(0, 100)}...

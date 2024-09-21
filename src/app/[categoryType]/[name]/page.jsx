@@ -6,6 +6,7 @@ import Artical from '@/components/articals/Artical';
 import '@/assets/css/homeStyle.css';
 import "@/assets/css/style.css";
 import ViewCategory from '@/components/ViewAll/ViewCategory';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 function page() {
     return (

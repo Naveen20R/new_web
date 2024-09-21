@@ -89,7 +89,7 @@ const Home = () => {
           <div className="col-12 col-md-8">
 
             {/* <CatHead />
-            <SubCatLinks />
+            <SubCatLinks /> */}
             <CatMain />
              */}
              <CategoryHeader />
