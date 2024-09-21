@@ -1,0 +1,42 @@
+.sub-category-wrap>.sub-category-image {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.sub-category-wrap:hover>.sub-category-image:hover {
+    filter: brightness(1);
+}
+
+.sigle-card {
+    background-color: var(--tg-gray-three);
+    overflow: hidden;
+    transition: all 0.3s ease; /* Adjust duration to 0.3s for overall card transition */
+}
+
+.card-img {
+    width: 100%;
+    height: 200px !important;
+    overflow: hidden;
+    border-radius:0px;
+}
+
+.card-img-child {
+    width: 100%;
+    height: 100%; /* Ensure it fills the card image area */
+    transition: transform 0.5s ease; /* Smooth transition for the scaling effect */
+    --bs-border-radius:0px;
+}
+
+.sigle-card:hover .card-img-child {
+    transform: scale(1.2); /* Scale effect on hover */
+}
+
+.card-title-links {
+    color: black !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sigle-card:hover .card-title-links {
+    text-decoration: underline;
+}

@@ -24,28 +24,39 @@ const ImageGallery = () => {
         {
             id: 100,
             name: 'ஆன்மீகத் தளங்கள்'
-        }]
+        },
+        {
+            id: 100,
+            name: 'ஆன்மீகத் தளங்கள்'
+        }
+        ,
+        {
+            id: 100,
+            name: 'ஆன்மீகத் தளங்கள்'
+        }
+    ]
 
     return (
-        <div className="d-flex flex-wrap row">
+        <div className="row" style={{border:'2px solid red'}}>
             {Sub_Categories.map((item, index) => {
                 const { width, height } = imageFormats[index];
                 const imageUrl = `https://picsum.photos/id/${item.id}/${width}/${height}`;
-
-                return (
+                    return (
+                <div className="col-12 col-md-4 mb-2 px-0 pe-md-2">
                     <div key={item.id} className="position-relative h-100 col sub-category-wrap">
                         <img
                             src={imageUrl}
                             alt={`Random Image ${item.id}`}
                             // width={width}
                             // height={height}
-                            style={{ objectFit: 'cover', height:'100px', width:'100%' }}
+                            style={{ objectFit: 'cover', height: '100px', width: '100%' }}
                             className="sub-category-image"
                         />
                         {/* <p style={{ textAlign: 'center' }} className="position-absolute bottom-0 text-white w-75 mx-auto">Image {id} ({width}x{height})</p> */}
                         <p style={{ textAlign: 'center' }} className="position-absolute bottom-0 text-white w-75 mx-auto">{item.name}</p>
                     </div>
-                );
+                </div>
+                    );
             })}
         </div>
     );
