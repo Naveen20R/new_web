@@ -13,12 +13,15 @@ import Link from 'next/link';
 import axios from '../config';
 import { IMAGE_BASE_URL } from "../config";
 import { DEFAULT_FAVICON } from "@/config/constant";
+
 import CatHead from "@/components/category/CatHead";
 import SubCatLinks from "@/components/category/SubCatLinks";
 import CatMain from "@/components/category/CatMain";
+
 import '@splidejs/splide/dist/css/splide.min.css';
 
-// import ViewCategory from "@/components/ViewAll/ViewCategory";
+import ViewCategory from "@/components/ViewAll/ViewCategory";
+import CollageCategories from "@/components/category/CollageCategories";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -81,20 +84,14 @@ const Home = () => {
     <>
       {/* ===== Artical Home Page ===== */}
       <div className="container">
-        <div className="row my-5 gap-3" >
+        <div className="row my-3 gap-3" >
           <div className="col-12 col-md-8">
 
-            {/* Tiitle start */}
-            <CatHead />
-            {/* Tiitle end */}
-
-            {/* Category start */}
+            {/* <CatHead />
             <SubCatLinks />
-            {/* Category end */}
-
-            {/* main card start */}
             <CatMain />
-            {/* main card end */}
+             */}
+            <CollageCategories />
           </div>
           <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
             <h2>Ads</h2>

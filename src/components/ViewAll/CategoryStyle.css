@@ -4,5 +4,5 @@
 }
 
 .sub-category-wrap:hover> .sub-category-image:hover{
-    filter: brightness(1);
+    filter: brightness(0.9);
 }

@@ -22,7 +22,7 @@ const Artical = () => {
           <div className="col-md-4 col-12">
             <div className="artical-image">
               <img
-                src="https://img-cdn.thepublive.com/fit-in/360x0/filters:format(webp)/tamil-ie/media/media_files/uploads/2020/10/Curry-leaves-kolambu-resized.jpg"
+                src={`https://picsum.photos/id/10/200/100`}
                 className="card-img img-fluid w-100 h-100"
                 alt="Article" />
               <h2 className='tag'>ஆரோக்கிய உணவு</h2>
@@ -50,7 +50,7 @@ const Artical = () => {
                 </div>
               </div>
               <Link href="/" className='post-title'>
-              {"உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்.".slice(0,70)}...
+                {"உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்.".slice(0, 70)}...
               </Link>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <Link href="" className='read-more-btn-style'>Read More <i class="fa-solid fa-arrow-right"></i></Link>
@@ -60,7 +60,8 @@ const Artical = () => {
         </div>
       </div>
     </div>
-    )}
+  )
+}
 export default Artical;
 
 {/* <div className="d-flex my-3 flex-wrap justify-content-start align-items-center gap-4">

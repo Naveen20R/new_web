@@ -71,6 +71,7 @@ ul li:hover ul {
 .nav-links {
     color: black !important;
     font-weight: 600;
+    text-decoration: none !important;
 }
 
 .list-item:hover {
@@ -94,10 +95,10 @@ ul li:hover ul {
     /* letter-spacing: .5px; */
 }
 
-.row {
+/* .row {
     margin-left: unset !important;
     margin-right: unset !important;
-}
+} */
 
 .shape {
     width: 10px;
@@ -123,7 +124,7 @@ ul li:hover ul {
     border-bottom: 8px solid black;
     margin: 0 auto;
     position: absolute;
-    bottom: 0px;
+    bottom: -3px;
 }
 
 .indicator-view-more {
@@ -135,7 +136,7 @@ ul li:hover ul {
     margin: 0 auto;
 
     position: absolute;
-    bottom: 0px;
+    bottom: -3px;
 
 }
 

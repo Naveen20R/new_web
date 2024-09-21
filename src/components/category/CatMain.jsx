@@ -29,6 +29,9 @@ function CatMain() {
         }
     };
 
+const image = [10, 33, 100, 1015, 51, 1031]
+
+
     return (
         <>
             <div className="row " style={{ borderBottom: '1px solid rgba(0, 101, 178, 0.263)' }}>
@@ -53,7 +56,7 @@ function CatMain() {
                                     <div className="main-img-parent">
                                         <img
                                             className="card-img-top main-card-img"
-                                            src="https://img-cdn.thepublive.com/fit-in/360x0/filters:format(webp)/tamil-ie/media/media_files/uploads/2020/10/Curry-leaves-kolambu-resized.jpg"
+                                            src={`https://picsum.photos/id/10/200/100`} 
                                             alt="Card image cap" />
                                     </div>
                                     <div className="card-body">

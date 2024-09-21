@@ -72,3 +72,7 @@
 .sub-cat-parent{
     overflow:hidden;
 }
+
+a{
+    text-decoration: none;
+}

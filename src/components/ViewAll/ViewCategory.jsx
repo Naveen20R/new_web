@@ -27,7 +27,7 @@ const ViewCategory = () => {
         <ImageGallery />
       </div>
 
-      <div className=' row gap-3'>
+      <div className=' row gap-3 col'>
         {image.map((image, idx) => (
           <div className='d-flex flex-column gap-2 col-5 rounded px-0' key={idx} style={{ background: 'var(--tg-gray-three)' }}>
             <img src={`https://picsum.photos/id/${image}/300/200`} alt='img' style={{ width: '100%', height: '200px' }}
