@@ -88,9 +88,9 @@ const Home = () => {
           <div className="col-12 col-md-8">
 
             {/* <CatHead />
-            <SubCatLinks />
+            <SubCatLinks /> */}
             <CatMain />
-             */}
+            
             <CollageCategories />
           </div>
           <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>

@@ -64,7 +64,6 @@ const CollageCategories = () => {
                                 <small style={{ textAlign: 'center', fontSize: '12px' }} className="position-absolute fw-semibold top-0 start-0 text-white shadow image-badge rounded px-2 py-1 mx-1 mt-1">{item.name}</small>
                                 
                                 <div className='p-3 d-flex flex-column justify-content-between position-absolute bottom-0 text-white gap-2' style={{ backdropFilter: 'brightness(0.99)' }}>
-
                                     <a href="" className="fw-semibold fs-6 text-white" >போன் பேசும் போது... வாய்ஸ் கிளையரா இல்லையா... இந்த டிப்ஸ் கை கொடுக்கும்</a>
 
                                     <div className='w-100 d-flex justify-content-between text-white'>

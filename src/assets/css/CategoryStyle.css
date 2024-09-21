@@ -40,3 +40,9 @@
 .sigle-card:hover .card-title-links {
     text-decoration: underline;
 }
+
+.breadcrumb{
+    display: flex;
+    justify-content:start;
+    align-items:center;
+}
