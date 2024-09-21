@@ -35,8 +35,8 @@ function CatMain() {
                 <div className="col-12 p-0 col-lg-8 main-category-2" id="main-category-2">
                     <Artical />
                 </div>
-                <div className="col-12 col-lg-4">
-                    <div className="position-relative">
+                <div className="col-12 col-lg-4 px-0 px-md-2">
+                    <div className="position-relative mt-3 mt-md-0">
                         <Splide
                             options={{
                                 type: 'slide', // Change to 'slide' for non-looping
@@ -49,16 +49,15 @@ function CatMain() {
                             }}
                             ref={splideRef}>
                             <SplideSlide>
-                                <div className="sliders-cards">
-                                    <div className="slider-img-parent">
+                                <div className="main-cards">
+                                    <div className="main-img-parent">
                                         <img
-                                            className="card-img-top small-card-img"
+                                            className="card-img-top main-card-img"
                                             src="https://img-cdn.thepublive.com/fit-in/360x0/filters:format(webp)/tamil-ie/media/media_files/uploads/2020/10/Curry-leaves-kolambu-resized.jpg"
-                                            alt="Card image cap"
-                                        />
+                                            alt="Card image cap" />
                                     </div>
                                     <div className="card-body">
-                                        <Link href="#" className='small-card-title'>
+                                        <Link href="#" className='main-card-title'>
                                             {" உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் ".slice(0, 100)}...
                                         </Link>
                                     </div>
@@ -88,16 +87,14 @@ function CatMain() {
                             onClick={handlePrev}
                             className="slider-button prev"
                             disabled={currentIndex === 0}
-                            style={{ cursor: currentIndex === 0 ? 'not-allowed' : 'pointer' }}
-                        >
+                            style={{ cursor: currentIndex === 0 ? 'not-allowed' : 'pointer' }}>
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
                         <button
                             onClick={handleNext}
                             className="slider-button next"
                             disabled={currentIndex === totalSlides - 1}
-                            style={{ cursor: currentIndex === totalSlides - 1 ? 'not-allowed' : 'pointer' }}
-                        >
+                            style={{ cursor: currentIndex === totalSlides - 1 ? 'not-allowed' : 'pointer' }}>
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>

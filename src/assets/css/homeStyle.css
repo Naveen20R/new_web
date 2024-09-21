@@ -164,3 +164,7 @@
     padding: 0; /* Ensure there's no padding affecting the height */
 }
 
+
+.bb-line{
+    border-bottom:1px solid rgba(0, 101, 178, 0.263) !important;
+}

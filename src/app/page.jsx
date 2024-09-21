@@ -5,7 +5,7 @@ import { fetchHomePosts } from "../actions/postAction";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 import '@/assets/css/homeStyle.css';
-import "../assets/css/style.css";
+import "@/assets/css/style.css";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
@@ -13,23 +13,6 @@ import Link from 'next/link';
 import axios from '../config';
 import { IMAGE_BASE_URL } from "../config";
 import { DEFAULT_FAVICON } from "@/config/constant";
-import Artical from '@/components/articals/Artical';
-import ArticalHeading from '@/components/articals/ArticalHeading';
-import SpotLightSection from '@/components/home/SpotLight';
-import CategoriesWithBlogSection from '@/components/home/CategoriesWithBlog';
-import ViewAll from "@/components/ViewAll/ViewAll";
-import ViewAllBreadcrumb from "@/components/ViewAll/ViewAllBreadcrumb";
-import SubCategoryLink from "@/components/ViewAll/SubCategoryLink";
-import ViewAllPagination from "@/components/ViewAll/ViewAllPagination";
-import ReadMoreBreadcrumb from "@/components/ReadMore/ReadMoreBreadcrumb";
-import ReadMore from "@/components/ReadMore/ReadMore";
-import SmallCard from "@/components/articals/SmallCard";
-import img from '@/assets/img/logo/right-up (3).png'; // Use `img` directly
-import img_2 from '@/assets/img/logo/right-up.png'; // Use `img` directly
-import Image from 'next/image';
-
-import VerticalCard from "@/components/articals/VerticalCard";
-import NormalCard from "@/components/articals/NormalCard";
 import CatHead from "@/components/category/CatHead";
 import SubCatLinks from "@/components/category/SubCatLinks";
 import CatMain from "@/components/category/CatMain";

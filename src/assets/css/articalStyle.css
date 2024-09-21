@@ -242,7 +242,7 @@
     display: flex;
     align-items: center;
     /* color: var(--tg-icon-color); */
-    color:black;
+    color: black;
     font-size: 14px;
     font-weight: 600;
     line-height: normal;
@@ -250,15 +250,17 @@
     text-transform: uppercase;
     gap: 5px;
 }
-.posted-date-key{
+
+.posted-date-key {
     font-weight: 800;
     color: #4A4A4A;
     font-size: medium;
 }
-.posted-date{
+
+.posted-date {
     /* color: var(--tg-icon-color); */
     font-weight: 600;
-    color:#595a5c;
+    color: #595a5c;
     font-size: small;
 }
 
@@ -288,7 +290,8 @@
     text-decoration: none;
 }
 
-.fa-whatsapp:hover,.facebook-icon:hover{
+.fa-whatsapp:hover,
+.facebook-icon:hover {
     box-shadow: 1px 0px 6px 3px rgba(0, 0, 0, 0.12);
 }
 
@@ -521,24 +524,32 @@
 
 .read-more-btn-style {
     /* background-color: #5b5c5c; */
-     /* background-color: #1eabe1; */
+    /* background-color: #1eabe1; */
     padding: 5px 15px;
     border-radius: 3px;
     /* color: white; */
     text-decoration: none;
-    font-weight:bolder;
-    color:#0066b2;
-    border:1px solid #0066b2;
-    font-size:13px;
+    font-weight: bolder;
+    color: #0066b2;
+    border: 1px solid #0066b2;
+    font-size: 13px;
 }
 
 .read-more-btn-style:hover {
     /* color:#1B1212; */
-    color:white;
-    background-color:#0066b2;
-   /* text-decoration:underline; */
+    color: white;
+    background-color: #0066b2;
+    /* text-decoration:underline; */
 }
 
 .artical-card {
     padding: 0;
+}
+
+.artical-image {
+    overflow: hidden;
+}
+
+.artical:hover .card-img {
+    transform: scale(1.10);
 }
