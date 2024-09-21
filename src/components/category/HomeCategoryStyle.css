@@ -1,5 +1,8 @@
-.image-badge{
+.image-badge {
     background: rgba(155, 193, 215, 0.263);
     backdrop-filter: blur(2px);
-    /* padding: 6px 10px; */
+}
+
+.card-gradient {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8290966044620973) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
 }

@@ -22,6 +22,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 import ViewCategory from "@/components/ViewAll/ViewCategory";
 import CollageCategories from "@/components/category/CollageCategories";
+import CategoryHeader from "@/components/category/CategoryHeader";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -91,6 +92,7 @@ const Home = () => {
             <SubCatLinks />
             <CatMain />
              */}
+             <CategoryHeader />
             <CollageCategories />
           </div>
           <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
