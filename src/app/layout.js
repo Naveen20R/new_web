@@ -6,15 +6,13 @@ import { CustomProvider } from 'rsuite';
 import 'rsuite/dist/rsuite-no-reset.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import '@/assets/css/articalStyle.css';
+
+// import '@/assets/css/articalStyle.css';
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "@/components/header/Header";
-// import NewMenu from "@/layouts/Menu";
 import Menu from "@/layouts/Menu";
-// import Menu from "@/layouts/MenuLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -45,11 +43,7 @@ const RootLayout = ({ children }) => {
               </button> */}
               <Header />
               <Menu />
-
               <section className='container py-1'>
-
-                {/* <Menu /> */}
-                {/* <Menu /> */}
                 <main className='fix'>
                   {children}
                 </main>

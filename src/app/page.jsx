@@ -34,6 +34,11 @@ import CatHead from "@/components/category/CatHead";
 import SubCatLinks from "@/components/category/SubCatLinks";
 import CatMain from "@/components/category/CatMain";
 
+// ===========================
+
+import ViewCategory from "@/components/ViewAll/ViewCategory";
+
+
 const Home = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
@@ -74,8 +79,6 @@ const Home = () => {
         array.push({ category: ele.category, singlePost: ele.posts[0] })
       })
       setAllPost(array);
-
-
     }
   }, []);
 
@@ -90,33 +93,40 @@ const Home = () => {
   }, [message]);
 
   if (loading || metadataLoading) return <Loader />;
-  let title = "உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்."
-
+  
   return (
-    <>
-      {/* ===== Artical Home Page ===== */}
-      <div className="container">
-        <div className="row my-5 gap-3" >
-          <div className="col-12 col-md-8">
+    // <>
+    //   {/* ===== Artical Home Page ===== */}
+    //   <div className="container">
+    //     <div className="row my-5 gap-3" >
+    //       <div className="col-12 col-md-8">
 
-            {/* Tiitle start */}
-            <CatHead />
-            {/* Tiitle end */}
+    //         {/* Tiitle start */}
+    //         <CatHead />
+    //         {/* Tiitle end */}
 
-            {/* Category start */}
-            <SubCatLinks />
-            {/* Category end */}
+    //         {/* Category start */}
+    //         <SubCatLinks />
+    //         {/* Category end */}
 
-            {/* main card start */}
-            <CatMain />
-            {/* main card end */}
-          </div>
-          <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
-            <h2>Demos</h2>
-          </div>
-        </div>
+    //         {/* main card start */}
+    //         <CatMain />
+    //         {/* main card end */}
+    //       </div>
+    //       <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
+    //         <h2>Demos</h2>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </>
+
+    <div className="row">
+      <div className="col">
+        <ViewCategory />
       </div>
-    </>
+      <div className="d-none d-lg-block col-4 border border-danger">
+      </div>
+    </div>
   );
 };
 

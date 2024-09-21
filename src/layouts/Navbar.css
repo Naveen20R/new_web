@@ -36,18 +36,27 @@ ul li:hover ul {
     display: flex;
 } */
 
+/* ============================================ */
 
 /* ======= Response 2 ========= */
 
 /* Hide sub menus by default */
-ul li ul {
+/* ul li ul {
     display: none;
 }
 
 ul li:hover ul {
-    display: block;
-    /* Show sub menus on hover */
+    display: block; */
+/* Show sub menus on hover */
+/* } */
+
+/* .ul-parent .li-child .ul-child {
+    display: none;
 }
+
+.ul-parent .li-child:hover .ul-child {
+    display: block;
+} */
 
 /* Show nested child lists when the corresponding parent is hovered or clicked */
 .more-child:hover .more-child-list,
@@ -59,7 +68,7 @@ ul li:hover ul {
     display: flex;
 }
 
-a {
+.nav-links {
     color: black !important;
     font-weight: 600;
 }
@@ -88,7 +97,6 @@ a {
 .row {
     margin-left: unset !important;
     margin-right: unset !important;
-
 }
 
 .shape {
@@ -113,12 +121,8 @@ a {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid black;
-    /* Change color as needed */
     margin: 0 auto;
-    /* Center the arrow */
-    /* position: relative; */
     position: absolute;
-    /* bottom: -5px; */
     bottom: 0px;
 }
 
@@ -128,11 +132,8 @@ a {
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid black;
-    /* Change color as needed */
     margin: 0 auto;
-    /* Center the arrow */
-    /* position: relative; */
-    /* bottom: -8px; */
+
     position: absolute;
     bottom: 0px;
 
@@ -140,7 +141,6 @@ a {
 
 .active-link {
     color: var(--tg-blue) !important;
-    /* Highlight the active link */
     font-weight: 600;
     position: relative;
 }
@@ -151,6 +151,10 @@ a {
 }
 
 ul li:hover>a {
+    color: var(--tg-blue) !important;
+}
+
+ul li:hover>div>a {
     color: var(--tg-blue) !important;
 }
 

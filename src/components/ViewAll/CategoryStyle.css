@@ -1,0 +1,8 @@
+.sub-category-wrap > .sub-category-image{
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+.sub-category-wrap:hover> .sub-category-image:hover{
+    filter: brightness(1);
+}
