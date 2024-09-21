@@ -16,7 +16,7 @@ const Artical = () => {
 
 
   return (
-    <div className="artical py-3">
+    <div className="artical h-100 my-3 pb-md-0">
       <div className="artical-card border-0">
         <div className="row g-0"> {/* Added g-0 to remove gutter space */}
           <div className="col-md-4 col-12">
@@ -28,7 +28,7 @@ const Artical = () => {
               <h2 className='tag'>ஆரோக்கிய உணவு</h2>
             </div>
           </div>
-          <div className="col-md-8 col-12">
+          <div className="col-md-8 col-12 ">
             <div className="mx-3">
               <div className="d-flex flex-wrap justify-content-start align-items-center gap-4 mb-2">
                 <div className="d-flex flex-row flex-wrap align-items-center justify-content-start w-100 gap-3">
@@ -50,7 +50,7 @@ const Artical = () => {
                 </div>
               </div>
               <Link href="/" className='post-title'>
-              {"உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்.".slice(0,100)}...
+              {"உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்.".slice(0,70)}...
               </Link>
               <div className="d-flex flex-wrap gap-2 mt-3">
                 <Link href="" className='read-more-btn-style'>Read More <i class="fa-solid fa-arrow-right"></i></Link>
