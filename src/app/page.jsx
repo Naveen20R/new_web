@@ -18,7 +18,7 @@ import SubCatLinks from "@/components/category/SubCatLinks";
 import CatMain from "@/components/category/CatMain";
 import '@splidejs/splide/dist/css/splide.min.css';
 
-import ViewCategory from "@/components/ViewAll/ViewCategory";
+// import ViewCategory from "@/components/ViewAll/ViewCategory";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -74,7 +74,6 @@ const Home = () => {
   }, [message]);
 
   if (loading || metadataLoading) return <Loader />;
-  let title = "உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால் கிடைக்கும் நன்மைகள் உணவு தயாரிப்பில் நல்லெண்ணெய் அதிகம் பயன்படுத்துவதால்."
 
   return (
 
