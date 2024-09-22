@@ -6,3 +6,44 @@
 .sub-category-wrap:hover> .sub-category-image:hover{
     /* filter: brightness(0.9); */
 }
+
+
+/* .my-slider-progress {
+    background: #ccc;
+    height: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.my-slider-progress-bar {
+    background: greenyellow;
+    height: 100%;
+    width: 0;
+    transition: width 400ms ease;
+} */
+
+
+.my-slider-progress {
+    background: #ccc;
+    height: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.my-slider-progress-bar {
+    background-color: darkcyan;
+    height: 100%;
+    width: 0;
+    transition: width 400ms ease;
+}
+
+.row{
+    margin-top: unset !important;
+    margin-right: unset !important;
+    margin-left: unset !important;
+}
+
+.image-badge {
+    background: rgba(155, 193, 215, 0.263);
+    backdrop-filter: blur(2px);
+}

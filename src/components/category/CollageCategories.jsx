@@ -1,62 +1,67 @@
-// Array of image IDs to filter (these are the random image IDs)
-// const imageIds = [10, 33, 100, 1015, 51]; // You can adjust these IDs
-// const imageIds = [10, 33, 100]; // You can adjust these IDs
-
 import './HomeCategoryStyle.css'
 
 const CollageCategories = () => {
     // Array to hold dimensions for each image
     const imageFormats = [
-        { width: 500, height: 250 }, // First image with 300x200
-        { width: 320, height: 250 }, // Second image with 150x150 (square)
-        { width: 270, height: 250 }, // Third image with 400x300
-        { width: 270, height: 250 }, // Fourth image with portrait format
-        { width: 270, height: 250 }  // Fifth image with landscape format
+        { width: 500, height: 250 },
+        { width: 320, height: 250 },
+        { width: 270, height: 250 },
+        { width: 270, height: 250 },
+        { width: 270, height: 250 }
     ];
 
     const Sub_Categories = [
         {
             id: 10,
-            name: 'ஆன்மீகச் செய்திகள்'
+            name: 'ஆன்மீகச் செய்திகள்',
+            col: 'col-12 col-sm-12 col-lg-7 '
         },
         {
             id: 33,
-            name: 'ஆன்மீகக் குறிப்புகள்'
+            name: 'ஆன்மீகக் குறிப்புகள்',
+            col: 'col-12 col-sm-6 col-lg-5 '
         },
         {
             id: 100,
-            name: 'ஆன்மீகத் தளங்கள்'
+            name: 'ஆன்மீகத் தளங்கள்',
+            col: 'col-12 col-sm-6 col-lg-4 '
         },
         {
             id: 1015,
-            name: 'ஆன்மீகத் தளங்கள்'
+            name: 'ஆன்மீகத் தளங்கள்',
+            col: 'col-12 col-sm-6 col-lg-4 '
         },
         {
             id: 1031,
-            name: 'ஆன்மீகத் தளங்கள்'
+            name: 'ஆன்மீகத் தளங்கள்',
+            col: 'col-12 col-sm-6 col-lg-4 '
         }
     ]
 
     return (
         <>
-            <div className="d-flex flex-wrap gap-2">
+            <div className="row px-0">
                 {Sub_Categories.map((item, index) => {
                     const { width, height } = imageFormats[index];
-                    const imageUrl = `https://picsum.photos/id/${item.id}/${width}/${height}`;
+                    // const imageUrl = `https://picsum.photos/id/${item.id}/${width}/${height}`;
+                    const imageUrl = `https://picsum.photos/id/${item.id}/500/250`;
                     return (
-                        <div className=" position-relative">
-                            <div key={item.id} className=" h-100 col sub-category-wrap d-flex ">
+                        <div className={`${item.col} px-1 my-1`}>
+                            <div key={item.id} className={`position-relative overflow-hidden`}>
                                 <img
                                     src={imageUrl}
                                     alt={`Random Image ${item.id}`}
-                                    style={{ objectFit: 'cover', height: height, width: width }}
-                                    className="sub-category-image"
+                                    style={{
+                                        objectFit: 'cover', width: 'auto', height: 'auto'
+                                        // height: height, width: width 
+                                    }}
+                                    className=""
                                 />
 
-                                <div className='card-gradient position-absolute w-100 h-100'></div>
+                                <div className='card-gradient position-absolute top-0 w-100 h-100 '></div>
 
                                 {/* Badge */}
-                                <small style={{ textAlign: 'center', fontSize: '12px' }} className="position-absolute fw-semibold top-0 start-0 text-white shadow-sm image-badge rounded px-2 py-1 m-2">{item.name}</small>
+                                <small style={{ textAlign: 'center', fontSize: '12px' }} className="  position-absolute fw-semibold top-0 start-0 text-white shadow-sm image-badge rounded px-2 py-1 m-2">{item.name}</small>
 
                                 {/* Share btn */}
                                 <div className='position-absolute top-0 end-0'>

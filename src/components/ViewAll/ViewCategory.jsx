@@ -16,18 +16,17 @@ const ViewCategory = () => {
     <>
       <div className="row">
         <div className="col py-0">
-            <Breadcrumb className='breadcrumb' separator={<AngleRightIcon />}>
-              <Breadcrumb.Item as={Link} href="/">
-                Home
-              </Breadcrumb.Item>
-              <Breadcrumb.Item as={Link} href="/components/overview">
-                ஆன்மீகம்
-              </Breadcrumb.Item>
-              <Breadcrumb.Item active> ஆன்மீகச் செய்திகள்</Breadcrumb.Item>
-            </Breadcrumb>
+          <Breadcrumb className='breadcrumb fw-medium' style={{fontSize:'14px'}} separator={<AngleRightIcon />}>
+            <Breadcrumb.Item as={Link} href="/">
+              Home
+            </Breadcrumb.Item>
+            <Breadcrumb.Item as={Link} href="/components/overview">
+              ஆன்மீகம்
+            </Breadcrumb.Item>
+            <Breadcrumb.Item active> ஆன்மீகச் செய்திகள்</Breadcrumb.Item>
+          </Breadcrumb>
         </div>
       </div>
-
 
       <div className='border-warning my-4'>
         <ImageGallery />
@@ -41,10 +40,9 @@ const ViewCategory = () => {
                 <img src={`https://picsum.photos/id/${image}/300/200`} alt='img'
                   className='rounded-top card-img-child w-100 img-fluid h-100' />
                 <small style={{ textAlign: 'center', fontSize: '12px' }} className="position-absolute fw-semibold top-0 start-0 text-white shadow image-badge rounded px-2 py-1 mx-1 mt-1">ஆரோக்கிய உணவு</small>
-
               </div>
               <div className='px-3 py-2 d-flex flex-column gap-3'>
-                <a href='' className='card-title-links'>
+                <a href='' className='nav-links'>
                   {text}
                 </a>
                 <div className='w-100 d-flex justify-content-between'>

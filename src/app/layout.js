@@ -41,8 +41,11 @@ const RootLayout = ({ children }) => {
               {/* <button className='scroll-top scroll-to-target' onClick={() => handleTopScreen()}>
                 <FontAwesomeIcon icon={faAngleUp} />
               </button> */}
-              <Header />
-              <Menu />
+              {/* <header className="position-fixed w-100 z-3 shadow bg-secondary-subtle"> */}
+                <Header />
+                <Menu />
+              {/* </header> */}
+
               <section className='container py-1'>
                 <main className='fix'>
                   {children}

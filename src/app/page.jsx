@@ -84,22 +84,17 @@ const Home = () => {
 
     <>
       {/* ===== Artical Home Page ===== */}
-      <div className="container">
-        <div className="row my-3 gap-3" >
+      {/* <div className="container"> */}
+        <div className="row" >
           <div className="col-12 col-md-8">
-
-            {/* <CatHead />
-            <SubCatLinks />
-            <CatMain />
-             */}
             <CategoryHeader />
             <CollageCategories />
           </div>
-          <div className="col" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
+          {/* <div className="col-md-4" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
             <h2>Ads</h2>
-          </div>
+          </div> */}
         </div>
-      </div>
+      {/* </div> */}
 
       {/* <div className="row">
         <div className="col">
@@ -109,9 +104,6 @@ const Home = () => {
         </div>
       </div> */}
     </>
-
-
-
   );
 };
 
