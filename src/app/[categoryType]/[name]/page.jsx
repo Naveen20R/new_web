@@ -1,7 +1,6 @@
 'use client'
 import React from 'react';
 import ReadMore from "@/components/ReadMore/ReadMore";
-import SubCatLinks_02 from '@/components/category/SubCatLinks_02';
 import Artical from '@/components/articals/Artical';
 import '@/assets/css/homeStyle.css';
 import "@/assets/css/style.css";

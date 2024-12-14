@@ -84,7 +84,7 @@ const ImageGallery = () => {
             </Splide>
 
             {/* Progress Bar */}
-            <div className="my-slider-progress mt-2">
+            <div className="my-slider-progress my-3">
                 <div
                     className="my-slider-progress-bar"
                     style={{ width: `${getProgressPercentage()}%`, transition: 'width 400ms ease' }}
@@ -92,7 +92,7 @@ const ImageGallery = () => {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="d-flex justify-content-end gap-4 mt-3 px-2">
+            <div className="d-flex justify-content-end gap-4 px-2">
                 <span
                     onClick={handlePrev}
                     style={{

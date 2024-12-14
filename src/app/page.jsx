@@ -14,15 +14,12 @@ import axios from '../config';
 import { IMAGE_BASE_URL } from "../config";
 import { DEFAULT_FAVICON } from "@/config/constant";
 
-import CatHead from "@/components/category/CatHead";
-import SubCatLinks from "@/components/category/SubCatLinks";
-import CatMain from "@/components/category/CatMain";
-
 import '@splidejs/splide/dist/css/splide.min.css';
 
 import ViewCategory from "@/components/ViewAll/ViewCategory";
 import CollageCategories from "@/components/category/CollageCategories";
 import CategoryHeader from "@/components/category/CategoryHeader";
+import ReadMore from "@/components/ReadMore/ReadMore";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -84,25 +81,23 @@ const Home = () => {
 
     <>
       {/* ===== Artical Home Page ===== */}
-      {/* <div className="container"> */}
-        <div className="row" >
-          <div className="col-12 col-md-8">
-            <CategoryHeader />
-            <CollageCategories />
-          </div>
-          {/* <div className="col-md-4" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
+      {/* <div className="row" >
+        <div className="col-12 col-md-8">
+          <CategoryHeader />
+          <CollageCategories />
+        </div> */}
+        {/* ////// <div className="col-md-4" style={{ borderLeft: '1px solid rgba(0, 101, 178, 0.263)' }}>
             <h2>Ads</h2>
-          </div> */}
-        </div>
+          </div> ////// */}
       {/* </div> */}
 
-      {/* <div className="row">
-        <div className="col">
-          <ViewCategory />
+      {/* ========= Single Post =========== */}
+      <div className="row" >
+        <div className="col-12 col-md-8">
+          <ReadMore />
         </div>
-        <div className="d-none d-lg-block col-4 border border-danger">
-        </div>
-      </div> */}
+      </div>
+
     </>
   );
 };

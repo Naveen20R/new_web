@@ -1,5 +1,8 @@
+'use client'
 import React from 'react'
-import { Breadcrumb } from 'react-bootstrap'
+import { Breadcrumb } from 'rsuite';
+import AngleRightIcon from '@rsuite/icons/legacy/AngleRight';
+import Link from 'next/link';
 
 const data = [
     {
@@ -9,12 +12,12 @@ const data = [
     },
     {
         link: '#',
-        name: 'செய்திகள்',
+        name: 'ஆன்மீகம்',
         type: ''
     },
     {
         link: '#',
-        name: 'இந்தியா',
+        name: 'ஆன்மீகச் செய்திகள்',
         type: ''
     },
     {
@@ -25,9 +28,9 @@ const data = [
 ]
 const ReadMoreBreadcrumb = () => {
     return (
-        <Breadcrumb style={{ fontSize: '14px' }}>
+        <Breadcrumb className='d-flex justify-content-start align-items-center fw-medium mb-0' style={{ fontSize: '14px' }} separator={<AngleRightIcon />}>
             {data.map((item, idx) => (
-                <Breadcrumb.Item key={idx} href={item.link}>{item.name.length > 15 ? (item.name.slice(0, 15) + '...') : (item.name)}</Breadcrumb.Item>
+                <Breadcrumb.Item key={idx} as={Link} href={item.link} active={item.type} >{item.name.length > 18 ? (item.name.slice(0, 18) + '...') : (item.name)}</Breadcrumb.Item>
             ))}
         </Breadcrumb>
     )
